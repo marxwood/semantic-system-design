@@ -1,0 +1,2594 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "urn:ssd:toc:v2:book",
+      "@type": "Book",
+      "name": "Semantic System Design",
+      "subtitle": "Graph-Navigable Table of Contents (v2, 250 nodes)",
+      "inLanguage": "en",
+      "about": [
+        "Semantic Web",
+        "Interaction Design",
+        "Knowledge Graphs",
+        "Design Systems",
+        "Human-AI Collaboration",
+        "Structured Data",
+        "Ontologies"
+      ],
+      "mainEntity": { "@id": "urn:ssd:toc:v2:hub" }
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:hub",
+      "@type": "WebPage",
+      "name": "Start Here: Reading the Book as a Knowledge Graph",
+      "description": "Central navigation node. Explains traversal rules, reading modes, and how links encode conceptual adjacency rather than chapter order.",
+      "keywords": ["hub", "navigation", "graph toc", "reading paths"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:foundations" },
+        { "@id": "urn:ssd:toc:v2:entry:semantics" },
+        { "@id": "urn:ssd:toc:v2:entry:graphnav" },
+        { "@id": "urn:ssd:toc:v2:entry:dso" },
+        { "@id": "urn:ssd:toc:v2:entry:dual" },
+        { "@id": "urn:ssd:toc:v2:entry:jsonld" },
+        { "@id": "urn:ssd:toc:v2:entry:ops" },
+        { "@id": "urn:ssd:toc:v2:entry:cases" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:foundations",
+      "@type": "WebPage",
+      "name": "Entry Hub: Foundations (The Shift)",
+      "description": "Why screen-centric design collapses: interfaces become projections; agents become operators; semantics becomes operational.",
+      "keywords": ["entry hub", "foundations", "paradigm shift"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:foundations:01" },
+        { "@id": "urn:ssd:toc:v2:foundations:05" },
+        { "@id": "urn:ssd:toc:v2:foundations:12" },
+        { "@id": "urn:ssd:toc:v2:foundations:20" },
+        { "@id": "urn:ssd:toc:v2:foundations:28" },
+        { "@id": "urn:ssd:toc:v2:foundations:35" },
+        { "@id": "urn:ssd:toc:v2:entry:semantics" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:entry:semantics" },
+        { "@id": "urn:ssd:toc:v2:entry:graphnav" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:semantics",
+      "@type": "WebPage",
+      "name": "Entry Hub: Semantics as Design Material",
+      "description": "Entities, relationships, capabilities, constraints, and intent surfaces as the new design substrate.",
+      "keywords": ["entry hub", "semantics", "meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:semantics:01" },
+        { "@id": "urn:ssd:toc:v2:semantics:10" },
+        { "@id": "urn:ssd:toc:v2:semantics:20" },
+        { "@id": "urn:ssd:toc:v2:semantics:30" },
+        { "@id": "urn:ssd:toc:v2:entry:graphnav" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:graphnav",
+      "@type": "WebPage",
+      "name": "Entry Hub: From Flows to Graphs",
+      "description": "Non-linear interaction, capability discovery, and multi-perspective navigation as defaults.",
+      "keywords": ["entry hub", "graph navigation", "non-linear"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:graphnav:01" },
+        { "@id": "urn:ssd:toc:v2:graphnav:10" },
+        { "@id": "urn:ssd:toc:v2:graphnav:20" },
+        { "@id": "urn:ssd:toc:v2:entry:dso" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:dso",
+      "@type": "WebPage",
+      "name": "Entry Hub: Design Systems as Ontologies",
+      "description": "From visual consistency to shared meaning: components, patterns, rules, inference, drift, spec generation.",
+      "keywords": ["entry hub", "design system", "ontology"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:dso:01" },
+        { "@id": "urn:ssd:toc:v2:dso:10" },
+        { "@id": "urn:ssd:toc:v2:entry:dual" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:dual",
+      "@type": "WebPage",
+      "name": "Entry Hub: Dual-Channel Interaction",
+      "description": "Human-readable + machine-interpretable surfaces. Supervision UI, confirmation patterns, accessibility as protocol.",
+      "keywords": ["entry hub", "dual-channel", "human+agent"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:dual:01" },
+        { "@id": "urn:ssd:toc:v2:dual:10" },
+        { "@id": "urn:ssd:toc:v2:entry:jsonld" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:jsonld",
+      "@type": "WebPage",
+      "name": "Entry Hub: JSON-LD as Action Surface",
+      "description": "Structured data patterns for entities, actions, forms, provenance, audits, and operational semantics.",
+      "keywords": ["entry hub", "json-ld", "action surface"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" },
+        { "@id": "urn:ssd:toc:v2:jsonld:10" },
+        { "@id": "urn:ssd:toc:v2:entry:ops" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:ops",
+      "@type": "WebPage",
+      "name": "Entry Hub: Operations, Governance, Guardrails",
+      "description": "How semantic products run: policies, telemetry, review loops, drift control, escalation paths, change management.",
+      "keywords": ["entry hub", "operations", "governance", "guardrails"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:ops:01" },
+        { "@id": "urn:ssd:toc:v2:ops:10" },
+        { "@id": "urn:ssd:toc:v2:entry:cases" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:entry:cases",
+      "@type": "WebPage",
+      "name": "Entry Hub: Case Studies & Failure Modes",
+      "description": "Domain slices and failure patterns. Shows how semantics breaks (and how to harden it).",
+      "keywords": ["entry hub", "case studies", "failure modes"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:hub" },
+        { "@id": "urn:ssd:toc:v2:cases:01" },
+        { "@id": "urn:ssd:toc:v2:cases:10" },
+        { "@id": "urn:ssd:toc:v2:cases:20" },
+        { "@id": "urn:ssd:toc:v2:entry:foundations" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:foundations:01",
+      "@type": "WebPage",
+      "name": "Foundations 01 — The Interface Stops Being the System",
+      "keywords": ["foundations", "shift", "interfaces"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:foundations" },
+        { "@id": "urn:ssd:toc:v2:foundations:02" },
+        { "@id": "urn:ssd:toc:v2:foundations:06" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:01" },
+        { "@id": "urn:ssd:toc:v2:graphnav:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:02",
+      "@type": "WebPage",
+      "name": "Foundations 02 — Why Screen-Centric Design Fails Under Autonomy",
+      "keywords": ["foundations", "screen-centric", "autonomy"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:01" },
+        { "@id": "urn:ssd:toc:v2:foundations:03" },
+        { "@id": "urn:ssd:toc:v2:foundations:07" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dual:01" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:03",
+      "@type": "WebPage",
+      "name": "Foundations 03 — Operators vs Users: A New Actor Model",
+      "keywords": ["foundations", "actors", "operators", "agents"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:02" },
+        { "@id": "urn:ssd:toc:v2:foundations:04" },
+        { "@id": "urn:ssd:toc:v2:foundations:10" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dual:02" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:04",
+      "@type": "WebPage",
+      "name": "Foundations 04 — Meaning Cannot Be Emergent Anymore",
+      "keywords": ["foundations", "meaning", "non-emergent"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:03" },
+        { "@id": "urn:ssd:toc:v2:foundations:05" },
+        { "@id": "urn:ssd:toc:v2:semantics:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:05",
+      "@type": "WebPage",
+      "name": "Foundations 05 — Semantics Before Presentation",
+      "keywords": ["foundations", "semantics", "presentation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:04" },
+        { "@id": "urn:ssd:toc:v2:foundations:06" },
+        { "@id": "urn:ssd:toc:v2:entry:semantics" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:02" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:06",
+      "@type": "WebPage",
+      "name": "Foundations 06 — UI as a Projection Layer",
+      "keywords": ["foundations", "projection", "views"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:05" },
+        { "@id": "urn:ssd:toc:v2:foundations:07" },
+        { "@id": "urn:ssd:toc:v2:graphnav:03" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:06" },
+        { "@id": "urn:ssd:toc:v2:dso:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:07",
+      "@type": "WebPage",
+      "name": "Foundations 07 — Why 'Visual Consistency' Is Not Shared Meaning",
+      "keywords": ["foundations", "design systems", "meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:06" },
+        { "@id": "urn:ssd:toc:v2:foundations:08" },
+        { "@id": "urn:ssd:toc:v2:entry:dso" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:08",
+      "@type": "WebPage",
+      "name": "Foundations 08 — The Semantic Gap in Organizations",
+      "keywords": ["foundations", "org", "semantic drift"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:07" },
+        { "@id": "urn:ssd:toc:v2:foundations:09" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:09",
+      "@type": "WebPage",
+      "name": "Foundations 09 — From UX Metrics to Operational Semantics",
+      "keywords": ["foundations", "metrics", "operations"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:08" },
+        { "@id": "urn:ssd:toc:v2:foundations:10" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:10",
+      "@type": "WebPage",
+      "name": "Foundations 10 — Trust, Control, and Delegation Surfaces",
+      "keywords": ["foundations", "trust", "control", "delegation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:09" },
+        { "@id": "urn:ssd:toc:v2:foundations:11" },
+        { "@id": "urn:ssd:toc:v2:dual:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:11",
+      "@type": "WebPage",
+      "name": "Foundations 11 — The New Role of UI/UX: Exposure Governance",
+      "keywords": ["foundations", "governance", "exposure"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:10" },
+        { "@id": "urn:ssd:toc:v2:foundations:12" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:12",
+      "@type": "WebPage",
+      "name": "Foundations 12 — Non-Linear by Default: Why Flows Break",
+      "keywords": ["foundations", "non-linear", "flows"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:11" },
+        { "@id": "urn:ssd:toc:v2:foundations:13" },
+        { "@id": "urn:ssd:toc:v2:entry:graphnav" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:13",
+      "@type": "WebPage",
+      "name": "Foundations 13 — Discovery vs Navigation",
+      "keywords": ["foundations", "discovery", "navigation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:12" },
+        { "@id": "urn:ssd:toc:v2:foundations:14" },
+        { "@id": "urn:ssd:toc:v2:graphnav:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:14",
+      "@type": "WebPage",
+      "name": "Foundations 14 — When the UI Is Generated",
+      "keywords": ["foundations", "generated UI", "projection"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:13" },
+        { "@id": "urn:ssd:toc:v2:foundations:15" },
+        { "@id": "urn:ssd:toc:v2:dso:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:15",
+      "@type": "WebPage",
+      "name": "Foundations 15 — Why Design Tokens Aren’t Enough",
+      "keywords": ["foundations", "tokens", "meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:14" },
+        { "@id": "urn:ssd:toc:v2:foundations:16" },
+        { "@id": "urn:ssd:toc:v2:dso:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:16",
+      "@type": "WebPage",
+      "name": "Foundations 16 — Behavior, Not Just Appearance",
+      "keywords": ["foundations", "behavior", "contracts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:15" },
+        { "@id": "urn:ssd:toc:v2:foundations:17" },
+        { "@id": "urn:ssd:toc:v2:dso:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:17",
+      "@type": "WebPage",
+      "name": "Foundations 17 — Semantics and Liability",
+      "keywords": ["foundations", "liability", "safety"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:16" },
+        { "@id": "urn:ssd:toc:v2:foundations:18" },
+        { "@id": "urn:ssd:toc:v2:ops:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:18",
+      "@type": "WebPage",
+      "name": "Foundations 18 — The Failure of Implicit Agreements",
+      "keywords": ["foundations", "implicit", "coordination"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:17" },
+        { "@id": "urn:ssd:toc:v2:foundations:19" },
+        { "@id": "urn:ssd:toc:v2:dso:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:19",
+      "@type": "WebPage",
+      "name": "Foundations 19 — Interfaces as Control Planes",
+      "keywords": ["foundations", "control plane", "supervision"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:18" },
+        { "@id": "urn:ssd:toc:v2:foundations:20" },
+        { "@id": "urn:ssd:toc:v2:dual:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:20",
+      "@type": "WebPage",
+      "name": "Foundations 20 — Users Become Verifiers",
+      "keywords": ["foundations", "verification", "human-in-the-loop"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:19" },
+        { "@id": "urn:ssd:toc:v2:foundations:21" },
+        { "@id": "urn:ssd:toc:v2:dual:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:21",
+      "@type": "WebPage",
+      "name": "Foundations 21 — Semantics as a Team Interface",
+      "keywords": ["foundations", "team interface", "shared language"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:20" },
+        { "@id": "urn:ssd:toc:v2:foundations:22" },
+        { "@id": "urn:ssd:toc:v2:dso:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:22",
+      "@type": "WebPage",
+      "name": "Foundations 22 — Semantics as Product Interface",
+      "keywords": ["foundations", "product interface", "API of meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:21" },
+        { "@id": "urn:ssd:toc:v2:foundations:23" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:23",
+      "@type": "WebPage",
+      "name": "Foundations 23 — Semantics as a Market Interface",
+      "keywords": ["foundations", "market", "composability"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:22" },
+        { "@id": "urn:ssd:toc:v2:foundations:24" },
+        { "@id": "urn:ssd:toc:v2:ops:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:24",
+      "@type": "WebPage",
+      "name": "Foundations 24 — The Rise of Action Surfaces",
+      "keywords": ["foundations", "actions", "capabilities"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:23" },
+        { "@id": "urn:ssd:toc:v2:foundations:25" },
+        { "@id": "urn:ssd:toc:v2:entry:jsonld" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:12" },
+        { "@id": "urn:ssd:toc:v2:jsonld:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:25",
+      "@type": "WebPage",
+      "name": "Foundations 25 — Why Agents Need Structured Reality",
+      "keywords": ["foundations", "agents", "structured knowledge"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:24" },
+        { "@id": "urn:ssd:toc:v2:foundations:26" },
+        { "@id": "urn:ssd:toc:v2:semantics:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:26",
+      "@type": "WebPage",
+      "name": "Foundations 26 — The Cost of Ambiguity",
+      "keywords": ["foundations", "ambiguity", "error"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:25" },
+        { "@id": "urn:ssd:toc:v2:foundations:27" },
+        { "@id": "urn:ssd:toc:v2:ops:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:27",
+      "@type": "WebPage",
+      "name": "Foundations 27 — The New Default: Explainability",
+      "keywords": ["foundations", "explainability", "traceability"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:26" },
+        { "@id": "urn:ssd:toc:v2:foundations:28" },
+        { "@id": "urn:ssd:toc:v2:dso:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:28",
+      "@type": "WebPage",
+      "name": "Foundations 28 — The Semantic Contract (Preview)",
+      "keywords": ["foundations", "semantic contract", "preview"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:27" },
+        { "@id": "urn:ssd:toc:v2:foundations:29" },
+        { "@id": "urn:ssd:toc:v2:semantics:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:29",
+      "@type": "WebPage",
+      "name": "Foundations 29 — Governance Is a Design Problem",
+      "keywords": ["foundations", "governance", "design"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:28" },
+        { "@id": "urn:ssd:toc:v2:foundations:30" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:30",
+      "@type": "WebPage",
+      "name": "Foundations 30 — Safety by Default (Preview)",
+      "keywords": ["foundations", "safety", "default"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:29" },
+        { "@id": "urn:ssd:toc:v2:foundations:31" },
+        { "@id": "urn:ssd:toc:v2:ops:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:31",
+      "@type": "WebPage",
+      "name": "Foundations 31 — Semantic Drift as Product Debt",
+      "keywords": ["foundations", "semantic drift", "debt"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:30" },
+        { "@id": "urn:ssd:toc:v2:foundations:32" },
+        { "@id": "urn:ssd:toc:v2:dso:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:32",
+      "@type": "WebPage",
+      "name": "Foundations 32 — The New Unit of Design: The Action",
+      "keywords": ["foundations", "actions", "unit of design"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:31" },
+        { "@id": "urn:ssd:toc:v2:foundations:33" },
+        { "@id": "urn:ssd:toc:v2:jsonld:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:33",
+      "@type": "WebPage",
+      "name": "Foundations 33 — Why 'UX' Splits Into UX + AX",
+      "keywords": ["foundations", "UX", "AX", "split"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:32" },
+        { "@id": "urn:ssd:toc:v2:foundations:34" },
+        { "@id": "urn:ssd:toc:v2:dual:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:34",
+      "@type": "WebPage",
+      "name": "Foundations 34 — The Agentic Interface: What Changes in Practice",
+      "keywords": ["foundations", "agentic", "practice"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:33" },
+        { "@id": "urn:ssd:toc:v2:foundations:35" },
+        { "@id": "urn:ssd:toc:v2:dual:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:35",
+      "@type": "WebPage",
+      "name": "Foundations 35 — The First Practical Rule Set",
+      "keywords": ["foundations", "rules", "practice"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:34" },
+        { "@id": "urn:ssd:toc:v2:foundations:36" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:36",
+      "@type": "WebPage",
+      "name": "Foundations 36 — What Designers Must Specify Explicitly",
+      "keywords": ["foundations", "explicit", "specification"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:35" },
+        { "@id": "urn:ssd:toc:v2:foundations:37" },
+        { "@id": "urn:ssd:toc:v2:semantics:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:37",
+      "@type": "WebPage",
+      "name": "Foundations 37 — What Engineers Must Stop Guessing",
+      "keywords": ["foundations", "engineering", "guessing"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:36" },
+        { "@id": "urn:ssd:toc:v2:foundations:38" },
+        { "@id": "urn:ssd:toc:v2:dso:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:38",
+      "@type": "WebPage",
+      "name": "Foundations 38 — The Minimum Viable Semantic Layer",
+      "keywords": ["foundations", "minimum viable", "semantic layer"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:37" },
+        { "@id": "urn:ssd:toc:v2:foundations:39" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:39",
+      "@type": "WebPage",
+      "name": "Foundations 39 — When Semantics Is Wrong: Failure Previews",
+      "keywords": ["foundations", "failures", "previews"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:38" },
+        { "@id": "urn:ssd:toc:v2:foundations:40" },
+        { "@id": "urn:ssd:toc:v2:cases:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:foundations:40",
+      "@type": "WebPage",
+      "name": "Foundations 40 — Closure: What You Should Now Be Able to Say",
+      "keywords": ["foundations", "closure", "checkpoint"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:foundations:39" },
+        { "@id": "urn:ssd:toc:v2:entry:foundations" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:01",
+      "@type": "WebPage",
+      "name": "Semantics 01 — Entities as Interaction Primitives",
+      "keywords": ["semantics", "entities", "primitives"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:semantics" },
+        { "@id": "urn:ssd:toc:v2:semantics:02" },
+        { "@id": "urn:ssd:toc:v2:foundations:04" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:01" },
+        { "@id": "urn:ssd:toc:v2:graphnav:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:02",
+      "@type": "WebPage",
+      "name": "Semantics 02 — Relationships: The Hidden UI",
+      "keywords": ["semantics", "relationships", "graph"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:01" },
+        { "@id": "urn:ssd:toc:v2:semantics:03" },
+        { "@id": "urn:ssd:toc:v2:graphnav:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:03",
+      "@type": "WebPage",
+      "name": "Semantics 03 — State: What Exists vs What Is True Now",
+      "keywords": ["semantics", "state", "truth"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:02" },
+        { "@id": "urn:ssd:toc:v2:semantics:04" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:04",
+      "@type": "WebPage",
+      "name": "Semantics 04 — Type Systems for Designers",
+      "keywords": ["semantics", "types", "modeling"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:03" },
+        { "@id": "urn:ssd:toc:v2:semantics:05" },
+        { "@id": "urn:ssd:toc:v2:dso:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:05",
+      "@type": "WebPage",
+      "name": "Semantics 05 — The Semantic Contract (Definition)",
+      "keywords": ["semantics", "contract", "definition"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:04" },
+        { "@id": "urn:ssd:toc:v2:semantics:06" },
+        { "@id": "urn:ssd:toc:v2:foundations:28" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:ops:01" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:06",
+      "@type": "WebPage",
+      "name": "Semantics 06 — Projection vs Source of Truth",
+      "keywords": ["semantics", "projection", "truth"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:05" },
+        { "@id": "urn:ssd:toc:v2:semantics:07" },
+        { "@id": "urn:ssd:toc:v2:foundations:06" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dso:01" },
+        { "@id": "urn:ssd:toc:v2:graphnav:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:07",
+      "@type": "WebPage",
+      "name": "Semantics 07 — Affordances Become Capabilities",
+      "keywords": ["semantics", "affordances", "capabilities"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:06" },
+        { "@id": "urn:ssd:toc:v2:semantics:08" },
+        { "@id": "urn:ssd:toc:v2:jsonld:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:08",
+      "@type": "WebPage",
+      "name": "Semantics 08 — Capability Modeling: What Can Happen",
+      "keywords": ["semantics", "capabilities", "actions"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:07" },
+        { "@id": "urn:ssd:toc:v2:semantics:09" },
+        { "@id": "urn:ssd:toc:v2:ops:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:09",
+      "@type": "WebPage",
+      "name": "Semantics 09 — Constraints: What Must Not Happen",
+      "keywords": ["semantics", "constraints", "guardrails"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:08" },
+        { "@id": "urn:ssd:toc:v2:semantics:10" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dual:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:10",
+      "@type": "WebPage",
+      "name": "Semantics 10 — Permissions: Designing Authority",
+      "keywords": ["semantics", "permissions", "authority"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:09" },
+        { "@id": "urn:ssd:toc:v2:semantics:11" },
+        { "@id": "urn:ssd:toc:v2:foundations:10" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:11",
+      "@type": "WebPage",
+      "name": "Semantics 11 — Policies as Product Features",
+      "keywords": ["semantics", "policies", "governance"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:10" },
+        { "@id": "urn:ssd:toc:v2:semantics:12" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:12",
+      "@type": "WebPage",
+      "name": "Semantics 12 — Actions: The New Unit of Design",
+      "keywords": ["semantics", "actions", "unit of design"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:11" },
+        { "@id": "urn:ssd:toc:v2:semantics:13" },
+        { "@id": "urn:ssd:toc:v2:foundations:32" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:03" },
+        { "@id": "urn:ssd:toc:v2:dual:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:13",
+      "@type": "WebPage",
+      "name": "Semantics 13 — Preconditions and Postconditions",
+      "keywords": ["semantics", "preconditions", "postconditions"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:12" },
+        { "@id": "urn:ssd:toc:v2:semantics:14" },
+        { "@id": "urn:ssd:toc:v2:jsonld:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:14",
+      "@type": "WebPage",
+      "name": "Semantics 14 — Error Semantics: What Went Wrong, Precisely",
+      "keywords": ["semantics", "errors", "contracts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:13" },
+        { "@id": "urn:ssd:toc:v2:semantics:15" },
+        { "@id": "urn:ssd:toc:v2:ops:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:15",
+      "@type": "WebPage",
+      "name": "Semantics 15 — Intent: What the User Meant",
+      "keywords": ["semantics", "intent", "disambiguation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:14" },
+        { "@id": "urn:ssd:toc:v2:semantics:16" },
+        { "@id": "urn:ssd:toc:v2:dual:05" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dual:03" },
+        { "@id": "urn:ssd:toc:v2:jsonld:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:16",
+      "@type": "WebPage",
+      "name": "Semantics 16 — Disambiguation Patterns",
+      "keywords": ["semantics", "disambiguation", "patterns"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:15" },
+        { "@id": "urn:ssd:toc:v2:semantics:17" },
+        { "@id": "urn:ssd:toc:v2:dual:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:17",
+      "@type": "WebPage",
+      "name": "Semantics 17 — Confirmation as a Semantic Primitive",
+      "keywords": ["semantics", "confirmation", "verification"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:16" },
+        { "@id": "urn:ssd:toc:v2:semantics:18" },
+        { "@id": "urn:ssd:toc:v2:dual:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:18",
+      "@type": "WebPage",
+      "name": "Semantics 18 — Provenance: Where Did This Come From",
+      "keywords": ["semantics", "provenance", "traceability"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:17" },
+        { "@id": "urn:ssd:toc:v2:semantics:19" },
+        { "@id": "urn:ssd:toc:v2:jsonld:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:19",
+      "@type": "WebPage",
+      "name": "Semantics 19 — Auditability: What Changed, When, and Why",
+      "keywords": ["semantics", "audit", "change"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:18" },
+        { "@id": "urn:ssd:toc:v2:semantics:20" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:20",
+      "@type": "WebPage",
+      "name": "Semantics 20 — Event Semantics: When Time Becomes Part of Meaning",
+      "keywords": ["semantics", "events", "time"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:19" },
+        { "@id": "urn:ssd:toc:v2:semantics:21" },
+        { "@id": "urn:ssd:toc:v2:ops:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:21",
+      "@type": "WebPage",
+      "name": "Semantics 21 — Claims vs Facts vs Assertions",
+      "keywords": ["semantics", "claims", "facts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:20" },
+        { "@id": "urn:ssd:toc:v2:semantics:22" },
+        { "@id": "urn:ssd:toc:v2:cases:10" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:22",
+      "@type": "WebPage",
+      "name": "Semantics 22 — Uncertainty as Structured Data",
+      "keywords": ["semantics", "uncertainty", "confidence"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:21" },
+        { "@id": "urn:ssd:toc:v2:semantics:23" },
+        { "@id": "urn:ssd:toc:v2:ops:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:23",
+      "@type": "WebPage",
+      "name": "Semantics 23 — Defaults: The Most Powerful Hidden Constraint",
+      "keywords": ["semantics", "defaults", "constraints"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:22" },
+        { "@id": "urn:ssd:toc:v2:semantics:24" },
+        { "@id": "urn:ssd:toc:v2:foundations:30" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:24",
+      "@type": "WebPage",
+      "name": "Semantics 24 — Naming: Identifiers, Slugs, and Stable Meaning",
+      "keywords": ["semantics", "naming", "identifiers"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:23" },
+        { "@id": "urn:ssd:toc:v2:semantics:25" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:25",
+      "@type": "WebPage",
+      "name": "Semantics 25 — Composability: When Meaning Becomes Modular",
+      "keywords": ["semantics", "composability", "modules"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:24" },
+        { "@id": "urn:ssd:toc:v2:semantics:26" },
+        { "@id": "urn:ssd:toc:v2:foundations:23" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:26",
+      "@type": "WebPage",
+      "name": "Semantics 26 — Constraints as UX: Safe Paths",
+      "keywords": ["semantics", "constraints", "safe paths"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:25" },
+        { "@id": "urn:ssd:toc:v2:semantics:27" },
+        { "@id": "urn:ssd:toc:v2:dual:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:27",
+      "@type": "WebPage",
+      "name": "Semantics 27 — Taxonomy vs Ontology (For Designers)",
+      "keywords": ["semantics", "taxonomy", "ontology"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:26" },
+        { "@id": "urn:ssd:toc:v2:semantics:28" },
+        { "@id": "urn:ssd:toc:v2:dso:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:28",
+      "@type": "WebPage",
+      "name": "Semantics 28 — Semantic Versioning of Meaning",
+      "keywords": ["semantics", "versioning", "change"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:27" },
+        { "@id": "urn:ssd:toc:v2:semantics:29" },
+        { "@id": "urn:ssd:toc:v2:ops:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:29",
+      "@type": "WebPage",
+      "name": "Semantics 29 — Semantic Diff: What Changed in Meaning",
+      "keywords": ["semantics", "diff", "review"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:28" },
+        { "@id": "urn:ssd:toc:v2:semantics:30" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:30",
+      "@type": "WebPage",
+      "name": "Semantics 30 — Closure: A Minimal Semantic Model You Can Draw",
+      "keywords": ["semantics", "closure", "checkpoint"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:29" },
+        { "@id": "urn:ssd:toc:v2:semantics:31" },
+        { "@id": "urn:ssd:toc:v2:entry:semantics" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:31",
+      "@type": "WebPage",
+      "name": "Semantics 31 — Patterns: Entity Cards as Semantic Views",
+      "keywords": ["semantics", "patterns", "views"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:30" },
+        { "@id": "urn:ssd:toc:v2:semantics:32" },
+        { "@id": "urn:ssd:toc:v2:dso:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:32",
+      "@type": "WebPage",
+      "name": "Semantics 32 — Patterns: Relationship Browsers",
+      "keywords": ["semantics", "patterns", "relationships"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:31" },
+        { "@id": "urn:ssd:toc:v2:semantics:33" },
+        { "@id": "urn:ssd:toc:v2:graphnav:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:33",
+      "@type": "WebPage",
+      "name": "Semantics 33 — Patterns: Capability Panels",
+      "keywords": ["semantics", "patterns", "capabilities"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:32" },
+        { "@id": "urn:ssd:toc:v2:semantics:34" },
+        { "@id": "urn:ssd:toc:v2:dual:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:34",
+      "@type": "WebPage",
+      "name": "Semantics 34 — Patterns: Constraint-Aware Forms",
+      "keywords": ["semantics", "patterns", "forms", "constraints"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:33" },
+        { "@id": "urn:ssd:toc:v2:semantics:35" },
+        { "@id": "urn:ssd:toc:v2:jsonld:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:35",
+      "@type": "WebPage",
+      "name": "Semantics 35 — Patterns: Intent Capture Widgets",
+      "keywords": ["semantics", "patterns", "intent"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:34" },
+        { "@id": "urn:ssd:toc:v2:semantics:36" },
+        { "@id": "urn:ssd:toc:v2:dual:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:36",
+      "@type": "WebPage",
+      "name": "Semantics 36 — Patterns: Provenance Badges",
+      "keywords": ["semantics", "patterns", "provenance"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:35" },
+        { "@id": "urn:ssd:toc:v2:semantics:37" },
+        { "@id": "urn:ssd:toc:v2:jsonld:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:37",
+      "@type": "WebPage",
+      "name": "Semantics 37 — Patterns: Audit Trails as UI",
+      "keywords": ["semantics", "patterns", "audit"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:36" },
+        { "@id": "urn:ssd:toc:v2:semantics:38" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:38",
+      "@type": "WebPage",
+      "name": "Semantics 38 — Patterns: Drift Alerts",
+      "keywords": ["semantics", "patterns", "drift"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:37" },
+        { "@id": "urn:ssd:toc:v2:semantics:39" },
+        { "@id": "urn:ssd:toc:v2:dso:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:39",
+      "@type": "WebPage",
+      "name": "Semantics 39 — Patterns: Semantic Diff Reviews",
+      "keywords": ["semantics", "patterns", "diff", "review"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:38" },
+        { "@id": "urn:ssd:toc:v2:semantics:40" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:semantics:40",
+      "@type": "WebPage",
+      "name": "Semantics 40 — Closure: Designing With Meaning Under Constraint",
+      "keywords": ["semantics", "closure", "checkpoint"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:semantics:39" },
+        { "@id": "urn:ssd:toc:v2:entry:semantics" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:01",
+      "@type": "WebPage",
+      "name": "GraphNav 01 — Graph Thinking for UI/UX",
+      "keywords": ["graphnav", "graphs", "thinking"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:graphnav" },
+        { "@id": "urn:ssd:toc:v2:graphnav:02" },
+        { "@id": "urn:ssd:toc:v2:semantics:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:02",
+      "@type": "WebPage",
+      "name": "GraphNav 02 — Discovery: Finding Capabilities in Context",
+      "keywords": ["graphnav", "discovery", "capabilities"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:01" },
+        { "@id": "urn:ssd:toc:v2:graphnav:03" },
+        { "@id": "urn:ssd:toc:v2:foundations:13" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:07" },
+        { "@id": "urn:ssd:toc:v2:dual:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:03",
+      "@type": "WebPage",
+      "name": "GraphNav 03 — Views as Routes Through Meaning",
+      "keywords": ["graphnav", "views", "routes"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:02" },
+        { "@id": "urn:ssd:toc:v2:graphnav:04" },
+        { "@id": "urn:ssd:toc:v2:foundations:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:04",
+      "@type": "WebPage",
+      "name": "GraphNav 04 — Facets, Filters, and Semantic Search",
+      "keywords": ["graphnav", "facets", "filters", "search"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:03" },
+        { "@id": "urn:ssd:toc:v2:graphnav:05" },
+        { "@id": "urn:ssd:toc:v2:semantics:32" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:05",
+      "@type": "WebPage",
+      "name": "GraphNav 05 — Multi-Perspective Navigation",
+      "keywords": ["graphnav", "perspectives", "navigation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:04" },
+        { "@id": "urn:ssd:toc:v2:graphnav:06" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:06",
+      "@type": "WebPage",
+      "name": "GraphNav 06 — Adjacency Rules: What Should Link to What",
+      "keywords": ["graphnav", "adjacency", "link rules"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:05" },
+        { "@id": "urn:ssd:toc:v2:graphnav:07" },
+        { "@id": "urn:ssd:toc:v2:dso:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:07",
+      "@type": "WebPage",
+      "name": "GraphNav 07 — Preventing the Wikipedia Problem",
+      "keywords": ["graphnav", "overlinking", "noise"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:06" },
+        { "@id": "urn:ssd:toc:v2:graphnav:08" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:08",
+      "@type": "WebPage",
+      "name": "GraphNav 08 — Closure Nodes: Where the Reader Can Stop",
+      "keywords": ["graphnav", "closure", "stopping points"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:07" },
+        { "@id": "urn:ssd:toc:v2:graphnav:09" },
+        { "@id": "urn:ssd:toc:v2:cases:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:09",
+      "@type": "WebPage",
+      "name": "GraphNav 09 — Hub-and-Spoke vs Mesh: Choosing Structure",
+      "keywords": ["graphnav", "hub", "mesh", "structure"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:08" },
+        { "@id": "urn:ssd:toc:v2:graphnav:10" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:graphnav:10",
+      "@type": "WebPage",
+      "name": "GraphNav 10 — Closure: Designing Navigable Knowledge",
+      "keywords": ["graphnav", "closure", "checkpoint"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:graphnav:09" },
+        { "@id": "urn:ssd:toc:v2:entry:graphnav" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:01",
+      "@type": "WebPage",
+      "name": "DSO 01 — From Component Libraries to Ontologies",
+      "keywords": ["dso", "design systems", "ontology"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:dso" },
+        { "@id": "urn:ssd:toc:v2:dso:02" },
+        { "@id": "urn:ssd:toc:v2:foundations:07" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:27" },
+        { "@id": "urn:ssd:toc:v2:graphnav:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:02",
+      "@type": "WebPage",
+      "name": "DSO 02 — Tokens vs Semantics: What Tokens Cannot Express",
+      "keywords": ["dso", "tokens", "semantics"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:01" },
+        { "@id": "urn:ssd:toc:v2:dso:03" },
+        { "@id": "urn:ssd:toc:v2:foundations:15" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:03",
+      "@type": "WebPage",
+      "name": "DSO 03 — Behavioral Contracts as First-Class Design Assets",
+      "keywords": ["dso", "behavior", "contracts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:02" },
+        { "@id": "urn:ssd:toc:v2:dso:04" },
+        { "@id": "urn:ssd:toc:v2:foundations:16" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:05" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:04",
+      "@type": "WebPage",
+      "name": "DSO 04 — UI Generation: Contracts in, Surfaces out",
+      "keywords": ["dso", "generated ui", "projection"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:03" },
+        { "@id": "urn:ssd:toc:v2:dso:05" },
+        { "@id": "urn:ssd:toc:v2:foundations:14" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:04" },
+        { "@id": "urn:ssd:toc:v2:graphnav:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:05",
+      "@type": "WebPage",
+      "name": "DSO 05 — Design Systems as Team Interfaces",
+      "keywords": ["dso", "team interface", "shared language"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:04" },
+        { "@id": "urn:ssd:toc:v2:dso:06" },
+        { "@id": "urn:ssd:toc:v2:foundations:21" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:06",
+      "@type": "WebPage",
+      "name": "DSO 06 — Drift: When Components Mean Different Things",
+      "keywords": ["dso", "drift", "governance"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:05" },
+        { "@id": "urn:ssd:toc:v2:dso:07" },
+        { "@id": "urn:ssd:toc:v2:foundations:31" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:38" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:07",
+      "@type": "WebPage",
+      "name": "DSO 07 — Components as Typed Projections",
+      "keywords": ["dso", "components", "types", "projections"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:06" },
+        { "@id": "urn:ssd:toc:v2:dso:08" },
+        { "@id": "urn:ssd:toc:v2:semantics:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:08",
+      "@type": "WebPage",
+      "name": "DSO 08 — Slot Semantics: What Can Appear Where",
+      "keywords": ["dso", "slots", "composition"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:07" },
+        { "@id": "urn:ssd:toc:v2:dso:09" },
+        { "@id": "urn:ssd:toc:v2:graphnav:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:09",
+      "@type": "WebPage",
+      "name": "DSO 09 — Interaction Grammar: Inputs, Outputs, and Effects",
+      "keywords": ["dso", "interaction grammar", "effects"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:08" },
+        { "@id": "urn:ssd:toc:v2:dso:10" },
+        { "@id": "urn:ssd:toc:v2:semantics:12" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:10",
+      "@type": "WebPage",
+      "name": "DSO 10 — Validation as UX: Contracts and Feedback",
+      "keywords": ["dso", "validation", "feedback"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:09" },
+        { "@id": "urn:ssd:toc:v2:dso:11" },
+        { "@id": "urn:ssd:toc:v2:semantics:14" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:11",
+      "@type": "WebPage",
+      "name": "DSO 11 — Pattern vs Component vs Primitive",
+      "keywords": ["dso", "patterns", "components", "primitives"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:10" },
+        { "@id": "urn:ssd:toc:v2:dso:12" },
+        { "@id": "urn:ssd:toc:v2:graphnav:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:12",
+      "@type": "WebPage",
+      "name": "DSO 12 — Naming Conventions as Governance",
+      "keywords": ["dso", "naming", "governance"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:11" },
+        { "@id": "urn:ssd:toc:v2:dso:13" },
+        { "@id": "urn:ssd:toc:v2:semantics:24" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:13",
+      "@type": "WebPage",
+      "name": "DSO 13 — Semantic Versioning for Components",
+      "keywords": ["dso", "versioning", "components"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:12" },
+        { "@id": "urn:ssd:toc:v2:dso:14" },
+        { "@id": "urn:ssd:toc:v2:semantics:28" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:14",
+      "@type": "WebPage",
+      "name": "DSO 14 — Breaking Changes Are Meaning Changes",
+      "keywords": ["dso", "breaking changes", "meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:13" },
+        { "@id": "urn:ssd:toc:v2:dso:15" },
+        { "@id": "urn:ssd:toc:v2:semantics:29" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:15",
+      "@type": "WebPage",
+      "name": "DSO 15 — Spec Generation: From Ontology to Documentation",
+      "keywords": ["dso", "spec generation", "documentation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:14" },
+        { "@id": "urn:ssd:toc:v2:dso:16" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:16",
+      "@type": "WebPage",
+      "name": "DSO 16 — Spec Generation: From Ontology to UI",
+      "keywords": ["dso", "spec generation", "generated ui"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:15" },
+        { "@id": "urn:ssd:toc:v2:dso:17" },
+        { "@id": "urn:ssd:toc:v2:dso:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:17",
+      "@type": "WebPage",
+      "name": "DSO 17 — Component Semantics for Agents",
+      "keywords": ["dso", "agents", "component semantics"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:16" },
+        { "@id": "urn:ssd:toc:v2:dso:18" },
+        { "@id": "urn:ssd:toc:v2:dual:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:18",
+      "@type": "WebPage",
+      "name": "DSO 18 — Accessibility as Protocol, Not Compliance",
+      "keywords": ["dso", "accessibility", "protocol"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:17" },
+        { "@id": "urn:ssd:toc:v2:dso:19" },
+        { "@id": "urn:ssd:toc:v2:dual:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:19",
+      "@type": "WebPage",
+      "name": "DSO 19 — ARIA as Semantics Surface",
+      "keywords": ["dso", "aria", "semantics surface"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:18" },
+        { "@id": "urn:ssd:toc:v2:dso:20" },
+        { "@id": "urn:ssd:toc:v2:entry:dual" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:20",
+      "@type": "WebPage",
+      "name": "DSO 20 — Component Telemetry: Capturing Intent, Not Clicks",
+      "keywords": ["dso", "telemetry", "intent"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:19" },
+        { "@id": "urn:ssd:toc:v2:dso:21" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:21",
+      "@type": "WebPage",
+      "name": "DSO 21 — Design Review as Semantic Review",
+      "keywords": ["dso", "review", "semantic review"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:20" },
+        { "@id": "urn:ssd:toc:v2:dso:22" },
+        { "@id": "urn:ssd:toc:v2:semantics:39" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:22",
+      "@type": "WebPage",
+      "name": "DSO 22 — Linting Meaning: Static Checks for Semantics",
+      "keywords": ["dso", "linting", "static checks"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:21" },
+        { "@id": "urn:ssd:toc:v2:dso:23" },
+        { "@id": "urn:ssd:toc:v2:ops:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:23",
+      "@type": "WebPage",
+      "name": "DSO 23 — Anti-Patterns: Beautiful UI, Broken Meaning",
+      "keywords": ["dso", "anti-patterns", "broken meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:22" },
+        { "@id": "urn:ssd:toc:v2:dso:24" },
+        { "@id": "urn:ssd:toc:v2:cases:02" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:24",
+      "@type": "WebPage",
+      "name": "DSO 24 — Pattern Catalogs as Graphs",
+      "keywords": ["dso", "patterns", "graphs"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:23" },
+        { "@id": "urn:ssd:toc:v2:dso:25" },
+        { "@id": "urn:ssd:toc:v2:graphnav:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:25",
+      "@type": "WebPage",
+      "name": "DSO 25 — Living Documentation: The System Explains Itself",
+      "keywords": ["dso", "documentation", "living"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:24" },
+        { "@id": "urn:ssd:toc:v2:dso:26" },
+        { "@id": "urn:ssd:toc:v2:ops:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:26",
+      "@type": "WebPage",
+      "name": "DSO 26 — From Guidelines to Executable Rules",
+      "keywords": ["dso", "rules", "executable"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:25" },
+        { "@id": "urn:ssd:toc:v2:dso:27" },
+        { "@id": "urn:ssd:toc:v2:ops:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:27",
+      "@type": "WebPage",
+      "name": "DSO 27 — Semantic Test Cases for Components",
+      "keywords": ["dso", "tests", "semantics"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:26" },
+        { "@id": "urn:ssd:toc:v2:dso:28" },
+        { "@id": "urn:ssd:toc:v2:cases:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:28",
+      "@type": "WebPage",
+      "name": "DSO 28 — Compatibility: Meaning-Preserving Refactors",
+      "keywords": ["dso", "compatibility", "refactors"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:27" },
+        { "@id": "urn:ssd:toc:v2:dso:29" },
+        { "@id": "urn:ssd:toc:v2:semantics:28" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:29",
+      "@type": "WebPage",
+      "name": "DSO 29 — Design Ops for Semantics: Roles and Rituals",
+      "keywords": ["dso", "design ops", "rituals"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:28" },
+        { "@id": "urn:ssd:toc:v2:dso:30" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:30",
+      "@type": "WebPage",
+      "name": "DSO 30 — Closure: What a Semantic Design System Is",
+      "keywords": ["dso", "closure", "checkpoint"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:29" },
+        { "@id": "urn:ssd:toc:v2:dso:31" },
+        { "@id": "urn:ssd:toc:v2:entry:dso" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:dso:31",
+      "@type": "WebPage",
+      "name": "DSO 31 — Pattern Atlas: Why Patterns Must Be Typed",
+      "keywords": ["dso", "pattern atlas", "types"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:30" },
+        { "@id": "urn:ssd:toc:v2:dso:32" },
+        { "@id": "urn:ssd:toc:v2:patterns:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:32",
+      "@type": "WebPage",
+      "name": "DSO 32 — Pattern Taxonomy: Navigation, Action, Validation, Supervision",
+      "keywords": ["dso", "patterns", "taxonomy"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:31" },
+        { "@id": "urn:ssd:toc:v2:dso:33" },
+        { "@id": "urn:ssd:toc:v2:graphnav:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:33",
+      "@type": "WebPage",
+      "name": "DSO 33 — Pattern Semantics: Inputs, Constraints, Guarantees",
+      "keywords": ["dso", "pattern semantics", "guarantees"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:32" },
+        { "@id": "urn:ssd:toc:v2:dso:34" },
+        { "@id": "urn:ssd:toc:v2:semantics:13" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:34",
+      "@type": "WebPage",
+      "name": "DSO 34 — Pattern Drift: Same UI, Different Meaning",
+      "keywords": ["dso", "pattern drift", "meaning"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:33" },
+        { "@id": "urn:ssd:toc:v2:dso:35" },
+        { "@id": "urn:ssd:toc:v2:dso:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:35",
+      "@type": "WebPage",
+      "name": "DSO 35 — Pattern Composition Rules",
+      "keywords": ["dso", "composition", "rules"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:34" },
+        { "@id": "urn:ssd:toc:v2:dso:36" },
+        { "@id": "urn:ssd:toc:v2:dso:08" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:36",
+      "@type": "WebPage",
+      "name": "DSO 36 — Pattern Testing: Semantic Assertions",
+      "keywords": ["dso", "testing", "assertions"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:35" },
+        { "@id": "urn:ssd:toc:v2:dso:37" },
+        { "@id": "urn:ssd:toc:v2:dso:27" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:37",
+      "@type": "WebPage",
+      "name": "DSO 37 — Documentation Edges: How Patterns Link",
+      "keywords": ["dso", "documentation", "edges"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:36" },
+        { "@id": "urn:ssd:toc:v2:dso:38" },
+        { "@id": "urn:ssd:toc:v2:graphnav:07" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:38",
+      "@type": "WebPage",
+      "name": "DSO 38 — Pattern Ownership and Change Control",
+      "keywords": ["dso", "ownership", "change control"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:37" },
+        { "@id": "urn:ssd:toc:v2:dso:39" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:39",
+      "@type": "WebPage",
+      "name": "DSO 39 — Pattern Linting and CI for Semantics",
+      "keywords": ["dso", "linting", "ci"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:38" },
+        { "@id": "urn:ssd:toc:v2:dso:40" },
+        { "@id": "urn:ssd:toc:v2:dso:22" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dso:40",
+      "@type": "WebPage",
+      "name": "DSO 40 — Closure: A Typed Pattern Atlas You Can Operate",
+      "keywords": ["dso", "closure", "pattern atlas"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:39" },
+        { "@id": "urn:ssd:toc:v2:entry:dso" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:patterns:01",
+      "@type": "WebPage",
+      "name": "Pattern 01 — Entity Card",
+      "keywords": ["patterns", "entity", "view"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dso:31" },
+        { "@id": "urn:ssd:toc:v2:patterns:02" },
+        { "@id": "urn:ssd:toc:v2:semantics:31" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:02",
+      "@type": "WebPage",
+      "name": "Pattern 02 — Relationship Browser",
+      "keywords": ["patterns", "relationships", "navigation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:01" },
+        { "@id": "urn:ssd:toc:v2:patterns:03" },
+        { "@id": "urn:ssd:toc:v2:semantics:32" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:03",
+      "@type": "WebPage",
+      "name": "Pattern 03 — Capability Panel",
+      "keywords": ["patterns", "capabilities", "actions"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:02" },
+        { "@id": "urn:ssd:toc:v2:patterns:04" },
+        { "@id": "urn:ssd:toc:v2:semantics:33" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:04",
+      "@type": "WebPage",
+      "name": "Pattern 04 — Constraint-Aware Form",
+      "keywords": ["patterns", "forms", "constraints"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:03" },
+        { "@id": "urn:ssd:toc:v2:patterns:05" },
+        { "@id": "urn:ssd:toc:v2:semantics:34" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:05",
+      "@type": "WebPage",
+      "name": "Pattern 05 — Intent Capture Widget",
+      "keywords": ["patterns", "intent", "capture"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:04" },
+        { "@id": "urn:ssd:toc:v2:patterns:06" },
+        { "@id": "urn:ssd:toc:v2:semantics:35" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:06",
+      "@type": "WebPage",
+      "name": "Pattern 06 — Confirmation Gate",
+      "keywords": ["patterns", "confirmation", "safety"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:05" },
+        { "@id": "urn:ssd:toc:v2:patterns:07" },
+        { "@id": "urn:ssd:toc:v2:semantics:17" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:07",
+      "@type": "WebPage",
+      "name": "Pattern 07 — Provenance Badge",
+      "keywords": ["patterns", "provenance", "trust"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:06" },
+        { "@id": "urn:ssd:toc:v2:patterns:08" },
+        { "@id": "urn:ssd:toc:v2:semantics:36" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:08",
+      "@type": "WebPage",
+      "name": "Pattern 08 — Audit Trail Viewer",
+      "keywords": ["patterns", "audit", "traceability"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:07" },
+        { "@id": "urn:ssd:toc:v2:patterns:09" },
+        { "@id": "urn:ssd:toc:v2:semantics:37" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:09",
+      "@type": "WebPage",
+      "name": "Pattern 09 — Drift Alert",
+      "keywords": ["patterns", "drift", "alerts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:08" },
+        { "@id": "urn:ssd:toc:v2:patterns:10" },
+        { "@id": "urn:ssd:toc:v2:semantics:38" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:patterns:10",
+      "@type": "WebPage",
+      "name": "Pattern 10 — Semantic Diff Review",
+      "keywords": ["patterns", "diff", "review"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:patterns:09" },
+        { "@id": "urn:ssd:toc:v2:ops:02" },
+        { "@id": "urn:ssd:toc:v2:semantics:39" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:01",
+      "@type": "WebPage",
+      "name": "Dual 01 — Dual-Channel UX: Human Surface + Machine Surface",
+      "keywords": ["dual", "dual-channel", "human+machine"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:dual" },
+        { "@id": "urn:ssd:toc:v2:dual:02" },
+        { "@id": "urn:ssd:toc:v2:foundations:33" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:01" },
+        { "@id": "urn:ssd:toc:v2:semantics:12" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:02",
+      "@type": "WebPage",
+      "name": "Dual 02 — Designing for Operators (Humans + Agents)",
+      "keywords": ["dual", "operators", "agents"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:01" },
+        { "@id": "urn:ssd:toc:v2:dual:03" },
+        { "@id": "urn:ssd:toc:v2:foundations:03" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:03",
+      "@type": "WebPage",
+      "name": "Dual 03 — Intent Capture: Asking the Right Questions",
+      "keywords": ["dual", "intent", "capture"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:02" },
+        { "@id": "urn:ssd:toc:v2:dual:04" },
+        { "@id": "urn:ssd:toc:v2:semantics:15" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:jsonld:05" },
+        { "@id": "urn:ssd:toc:v2:patterns:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:04",
+      "@type": "WebPage",
+      "name": "Dual 04 — Confirmation Gates: Preventing Irreversible Mistakes",
+      "keywords": ["dual", "confirmation", "safety"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:03" },
+        { "@id": "urn:ssd:toc:v2:dual:05" },
+        { "@id": "urn:ssd:toc:v2:semantics:17" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:ops:03" },
+        { "@id": "urn:ssd:toc:v2:jsonld:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:05",
+      "@type": "WebPage",
+      "name": "Dual 05 — Explainability UI: Showing Reasons, Not Just Results",
+      "keywords": ["dual", "explainability", "reasons"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:04" },
+        { "@id": "urn:ssd:toc:v2:dual:06" },
+        { "@id": "urn:ssd:toc:v2:foundations:27" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:18" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:06",
+      "@type": "WebPage",
+      "name": "Dual 06 — Accessibility as a Machine-Readable Protocol",
+      "keywords": ["dual", "accessibility", "protocol"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:05" },
+        { "@id": "urn:ssd:toc:v2:dual:07" },
+        { "@id": "urn:ssd:toc:v2:dso:18" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dso:19" },
+        { "@id": "urn:ssd:toc:v2:jsonld:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:07",
+      "@type": "WebPage",
+      "name": "Dual 07 — Progressive Disclosure for Agents",
+      "keywords": ["dual", "progressive disclosure", "agents"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:06" },
+        { "@id": "urn:ssd:toc:v2:dual:08" },
+        { "@id": "urn:ssd:toc:v2:graphnav:07" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:08",
+      "@type": "WebPage",
+      "name": "Dual 08 — Supervision UI: Monitoring Autonomous Work",
+      "keywords": ["dual", "supervision", "monitoring"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:07" },
+        { "@id": "urn:ssd:toc:v2:dual:09" },
+        { "@id": "urn:ssd:toc:v2:ops:04" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:foundations:19" },
+        { "@id": "urn:ssd:toc:v2:patterns:08" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:09",
+      "@type": "WebPage",
+      "name": "Dual 09 — Intervention Patterns: When Humans Take Over",
+      "keywords": ["dual", "intervention", "handoff"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:08" },
+        { "@id": "urn:ssd:toc:v2:dual:10" },
+        { "@id": "urn:ssd:toc:v2:ops:03" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:dual:10",
+      "@type": "WebPage",
+      "name": "Dual 10 — Closure: What Dual-Channel Design Solves",
+      "keywords": ["dual", "closure", "checkpoint"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:dual:09" },
+        { "@id": "urn:ssd:toc:v2:entry:dual" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:01",
+      "@type": "WebPage",
+      "name": "JSON-LD 01 — Modeling Entities for Interaction",
+      "keywords": ["jsonld", "entities", "schema.org"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:jsonld" },
+        { "@id": "urn:ssd:toc:v2:jsonld:02" },
+        { "@id": "urn:ssd:toc:v2:semantics:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:02",
+      "@type": "WebPage",
+      "name": "JSON-LD 02 — Modeling Capabilities as Actions",
+      "keywords": ["jsonld", "actions", "capabilities"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:01" },
+        { "@id": "urn:ssd:toc:v2:jsonld:03" },
+        { "@id": "urn:ssd:toc:v2:semantics:07" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:03",
+      "@type": "WebPage",
+      "name": "JSON-LD 03 — Action Payloads and Result Semantics",
+      "keywords": ["jsonld", "payloads", "results"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:02" },
+        { "@id": "urn:ssd:toc:v2:jsonld:04" },
+        { "@id": "urn:ssd:toc:v2:semantics:12" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:04",
+      "@type": "WebPage",
+      "name": "JSON-LD 04 — Forms as Contracts (Constraints, Validation, Errors)",
+      "keywords": ["jsonld", "forms", "contracts", "validation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:03" },
+        { "@id": "urn:ssd:toc:v2:jsonld:05" },
+        { "@id": "urn:ssd:toc:v2:semantics:14" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dual:04" },
+        { "@id": "urn:ssd:toc:v2:patterns:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:05",
+      "@type": "WebPage",
+      "name": "JSON-LD 05 — Intent Objects and Disambiguation",
+      "keywords": ["jsonld", "intent", "disambiguation"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:04" },
+        { "@id": "urn:ssd:toc:v2:jsonld:06" },
+        { "@id": "urn:ssd:toc:v2:semantics:16" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dual:03" },
+        { "@id": "urn:ssd:toc:v2:patterns:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:06",
+      "@type": "WebPage",
+      "name": "JSON-LD 06 — Provenance, Audit, and Traceability",
+      "keywords": ["jsonld", "provenance", "audit"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:05" },
+        { "@id": "urn:ssd:toc:v2:jsonld:07" },
+        { "@id": "urn:ssd:toc:v2:semantics:18" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:ops:04" },
+        { "@id": "urn:ssd:toc:v2:patterns:08" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:07",
+      "@type": "WebPage",
+      "name": "JSON-LD 07 — Linking Strategy: IDs, URLs, and Stability",
+      "keywords": ["jsonld", "linking", "ids", "stability"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:06" },
+        { "@id": "urn:ssd:toc:v2:jsonld:08" },
+        { "@id": "urn:ssd:toc:v2:semantics:24" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:08",
+      "@type": "WebPage",
+      "name": "JSON-LD 08 — Embedding Semantics in UI Components",
+      "keywords": ["jsonld", "ui", "embedding"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:07" },
+        { "@id": "urn:ssd:toc:v2:jsonld:09" },
+        { "@id": "urn:ssd:toc:v2:dso:07" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:09",
+      "@type": "WebPage",
+      "name": "JSON-LD 09 — Tool Surfaces: Making Products Callable",
+      "keywords": ["jsonld", "tools", "callable products"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:08" },
+        { "@id": "urn:ssd:toc:v2:jsonld:10" },
+        { "@id": "urn:ssd:toc:v2:ops:01" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:jsonld:10",
+      "@type": "WebPage",
+      "name": "JSON-LD 10 — Closure: A Minimal JSON-LD Toolkit for Designers",
+      "keywords": ["jsonld", "closure", "toolkit"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:jsonld:09" },
+        { "@id": "urn:ssd:toc:v2:entry:jsonld" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:01",
+      "@type": "WebPage",
+      "name": "Ops 01 — Governance: Who Owns Meaning",
+      "keywords": ["ops", "governance", "ownership"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:entry:ops" },
+        { "@id": "urn:ssd:toc:v2:ops:02" },
+        { "@id": "urn:ssd:toc:v2:foundations:29" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:11" },
+        { "@id": "urn:ssd:toc:v2:dso:29" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:02",
+      "@type": "WebPage",
+      "name": "Ops 02 — Change Control: Reviewing Meaning Changes",
+      "keywords": ["ops", "change control", "review"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:01" },
+        { "@id": "urn:ssd:toc:v2:ops:03" },
+        { "@id": "urn:ssd:toc:v2:semantics:39" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dso:13" },
+        { "@id": "urn:ssd:toc:v2:graphnav:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:03",
+      "@type": "WebPage",
+      "name": "Ops 03 — Guardrails: Policies, Permissions, and Safety",
+      "keywords": ["ops", "guardrails", "policies", "permissions"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:02" },
+        { "@id": "urn:ssd:toc:v2:ops:04" },
+        { "@id": "urn:ssd:toc:v2:dual:04" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:semantics:09" },
+        { "@id": "urn:ssd:toc:v2:semantics:10" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:04",
+      "@type": "WebPage",
+      "name": "Ops 04 — Observability: Telemetry for Meaning",
+      "keywords": ["ops", "observability", "telemetry"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:03" },
+        { "@id": "urn:ssd:toc:v2:ops:05" },
+        { "@id": "urn:ssd:toc:v2:dual:08" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dso:20" },
+        { "@id": "urn:ssd:toc:v2:jsonld:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:05",
+      "@type": "WebPage",
+      "name": "Ops 05 — Incident Response: When Semantics Breaks",
+      "keywords": ["ops", "incidents", "failures"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:04" },
+        { "@id": "urn:ssd:toc:v2:ops:06" },
+        { "@id": "urn:ssd:toc:v2:foundations:26" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:cases:01" },
+        { "@id": "urn:ssd:toc:v2:semantics:14" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:06",
+      "@type": "WebPage",
+      "name": "Ops 06 — Lifecycle: Evolving the Model Without Chaos",
+      "keywords": ["ops", "lifecycle", "evolution"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:05" },
+        { "@id": "urn:ssd:toc:v2:ops:07" },
+        { "@id": "urn:ssd:toc:v2:semantics:28" }
+      ],
+      "isRelatedTo": [
+        { "@id": "urn:ssd:toc:v2:dso:06" },
+        { "@id": "urn:ssd:toc:v2:graphnav:09" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:07",
+      "@type": "WebPage",
+      "name": "Ops 07 — Access Control Models: Role, Attribute, Capability",
+      "keywords": ["ops", "access control", "rbac", "abac"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:06" },
+        { "@id": "urn:ssd:toc:v2:ops:08" },
+        { "@id": "urn:ssd:toc:v2:semantics:10" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:08",
+      "@type": "WebPage",
+      "name": "Ops 08 — Policy Engines: Executing Governance",
+      "keywords": ["ops", "policy engine", "execution"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:07" },
+        { "@id": "urn:ssd:toc:v2:ops:09" },
+        { "@id": "urn:ssd:toc:v2:dso:26" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:09",
+      "@type": "WebPage",
+      "name": "Ops 09 — Quality: Semantic Tests, Checks, and SLOs",
+      "keywords": ["ops", "quality", "tests", "slos"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:08" },
+        { "@id": "urn:ssd:toc:v2:ops:10" },
+        { "@id": "urn:ssd:toc:v2:dso:27" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:10",
+      "@type": "WebPage",
+      "name": "Ops 10 — Drift Detection: Early Warning Systems",
+      "keywords": ["ops", "drift detection", "alerts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:09" },
+        { "@id": "urn:ssd:toc:v2:ops:11" },
+        { "@id": "urn:ssd:toc:v2:semantics:38" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:11",
+      "@type": "WebPage",
+      "name": "Ops 11 — Semantic Backwards Compatibility",
+      "keywords": ["ops", "compatibility", "backwards"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:10" },
+        { "@id": "urn:ssd:toc:v2:ops:12" },
+        { "@id": "urn:ssd:toc:v2:dso:28" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:12",
+      "@type": "WebPage",
+      "name": "Ops 12 — Migration Playbooks: Moving Without Breaking Meaning",
+      "keywords": ["ops", "migration", "playbooks"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:11" },
+        { "@id": "urn:ssd:toc:v2:ops:13" },
+        { "@id": "urn:ssd:toc:v2:semantics:29" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:13",
+      "@type": "WebPage",
+      "name": "Ops 13 — Incident Forensics: Reconstructing the Meaning Graph",
+      "keywords": ["ops", "forensics", "reconstruction"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:12" },
+        { "@id": "urn:ssd:toc:v2:ops:14" },
+        { "@id": "urn:ssd:toc:v2:jsonld:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:14",
+      "@type": "WebPage",
+      "name": "Ops 14 — Human Review Queues: What Must Be Approved",
+      "keywords": ["ops", "review queues", "approval"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:13" },
+        { "@id": "urn:ssd:toc:v2:ops:15" },
+        { "@id": "urn:ssd:toc:v2:dual:09" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:15",
+      "@type": "WebPage",
+      "name": "Ops 15 — Auditability by Design (Not Retrofits)",
+      "keywords": ["ops", "auditability", "design"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:14" },
+        { "@id": "urn:ssd:toc:v2:ops:16" },
+        { "@id": "urn:ssd:toc:v2:semantics:19" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:16",
+      "@type": "WebPage",
+      "name": "Ops 16 — Data Hygiene: Canonicalization and De-duplication",
+      "keywords": ["ops", "data hygiene", "canonicalization"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:15" },
+        { "@id": "urn:ssd:toc:v2:ops:17" },
+        { "@id": "urn:ssd:toc:v2:semantics:24" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:17",
+      "@type": "WebPage",
+      "name": "Ops 17 — Dispute Resolution: Conflicting Claims",
+      "keywords": ["ops", "dispute resolution", "conflicts"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:16" },
+        { "@id": "urn:ssd:toc:v2:ops:18" },
+        { "@id": "urn:ssd:toc:v2:semantics:21" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:18",
+      "@type": "WebPage",
+      "name": "Ops 18 — Uncertainty Policies: What Confidence Is Required",
+      "keywords": ["ops", "uncertainty", "confidence"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:17" },
+        { "@id": "urn:ssd:toc:v2:ops:19" },
+        { "@id": "urn:ssd:toc:v2:semantics:22" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:19",
+      "@type": "WebPage",
+      "name": "Ops 19 — Release Engineering for Meaning",
+      "keywords": ["ops", "release", "engineering"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:18" },
+        { "@id": "urn:ssd:toc:v2:ops:20" },
+        { "@id": "urn:ssd:toc:v2:dso:13" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:20",
+      "@type": "WebPage",
+      "name": "Ops 20 — Org Patterns: Who Does What Now",
+      "keywords": ["ops", "organization", "roles"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:19" },
+        { "@id": "urn:ssd:toc:v2:ops:21" },
+        { "@id": "urn:ssd:toc:v2:dso:29" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:21",
+      "@type": "WebPage",
+      "name": "Ops 21 — Vendor and Ecosystem Integration: Shared Semantics",
+      "keywords": ["ops", "ecosystem", "integration"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:20" },
+        { "@id": "urn:ssd:toc:v2:ops:22" },
+        { "@id": "urn:ssd:toc:v2:semantics:25" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:22",
+      "@type": "WebPage",
+      "name": "Ops 22 — Tooling: Model Editors, Linters, and Graph Browsers",
+      "keywords": ["ops", "tooling", "editors"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:21" },
+        { "@id": "urn:ssd:toc:v2:ops:23" },
+        { "@id": "urn:ssd:toc:v2:graphnav:04" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:23",
+      "@type": "WebPage",
+      "name": "Ops 23 — Anti-Patterns: Governance Theater",
+      "keywords": ["ops", "anti-patterns", "theater"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:22" },
+        { "@id": "urn:ssd:toc:v2:ops:24" },
+        { "@id": "urn:ssd:toc:v2:cases:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:24",
+      "@type": "WebPage",
+      "name": "Ops 24 — Economics: The Cost of Meaning Work",
+      "keywords": ["ops", "economics", "cost"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:23" },
+        { "@id": "urn:ssd:toc:v2:ops:25" },
+        { "@id": "urn:ssd:toc:v2:foundations:09" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:25",
+      "@type": "WebPage",
+      "name": "Ops 25 — Governance Metrics: Measuring Semantic Health",
+      "keywords": ["ops", "metrics", "semantic health"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:24" },
+        { "@id": "urn:ssd:toc:v2:ops:26" },
+        { "@id": "urn:ssd:toc:v2:semantics:38" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:26",
+      "@type": "WebPage",
+      "name": "Ops 26 — Operating Model: From Roadmaps to Knowledge Graphs",
+      "keywords": ["ops", "operating model", "roadmaps"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:25" },
+        { "@id": "urn:ssd:toc:v2:ops:27" },
+        { "@id": "urn:ssd:toc:v2:graphnav:05" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:27",
+      "@type": "WebPage",
+      "name": "Ops 27 — The Semantic Control Plane",
+      "keywords": ["ops", "control plane", "semantics"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:26" },
+        { "@id": "urn:ssd:toc:v2:ops:28" },
+        { "@id": "urn:ssd:toc:v2:foundations:19" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:28",
+      "@type": "WebPage",
+      "name": "Ops 28 — Security: Threat Models for Agentic Products",
+      "keywords": ["ops", "security", "threat models"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:27" },
+        { "@id": "urn:ssd:toc:v2:ops:29" },
+        { "@id": "urn:ssd:toc:v2:dual:08" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:29",
+      "@type": "WebPage",
+      "name": "Ops 29 — Compliance: Evidence-First Interfaces",
+      "keywords": ["ops", "compliance", "evidence"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:28" },
+        { "@id": "urn:ssd:toc:v2:ops:30" },
+        { "@id": "urn:ssd:toc:v2:jsonld:06" }
+      ]
+    },
+    {
+      "@id": "urn:ssd:toc:v2:ops:30",
+      "@type": "WebPage",
+      "name": "Ops 30 — Closure: Running a Semantic Product",
+      "keywords": ["ops", "closure", "operations"],
+      "isPartOf": { "@id": "urn:ssd:toc:v2:book" },
+      "relatedLink": [
+        { "@id": "urn:ssd:toc:v2:ops:29" },
+        { "@id": "urn:ssd:toc:v2:entry:ops" },
+        { "@id": "urn:ssd:toc:v2:hub" }
+      ]
+    }
+  ]
+}

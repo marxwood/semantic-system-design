@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "graph:index": "node tools/generate-graph-index.mjs --seed book/toc.v2.jsonld",
+    "book:serve": "node server.mjs"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "marked": "^17.0.1"
+  }
+}
