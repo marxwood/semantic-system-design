@@ -9,10 +9,13 @@ keywords:
   - entities
   - schemas
   - design tokens
+  - architectural rules
+  - semantic delta
 related:
   - urn:ssd:toc:v2:dso:01
   - urn:ssd:toc:v2:dso:03
   - urn:ssd:toc:v2:semantics:01
+  - urn:ssd:toc:v2:semantics:03
   - urn:ssd:toc:v2:jsonld:01
   - urn:ssd:toc:v2:foundations:07
 ---
@@ -46,6 +49,36 @@ Typing an entity means declaring:
 
 For designers, this replaces vague labels with explicit concepts.
 
+## Architectural rule: distinct types require semantic delta
+
+A specialized semantic type is justified only by a declared difference in at least one of these obligations:
+
+- required relations
+- lifecycle
+- validation
+- authority
+
+If those obligations do not differ, the model should retain one type and represent the variation orthogonally.
+
+Disclosure classification, presentation, transport, and storage are orthogonal policies by default. They justify a distinct type only when they change one of the four obligations above.
+
+For example, `private`, `protected`, and `public` can classify the disclosure of one event type. They do not, by themselves, justify three event classes.
+
+This rule prevents class proliferation while preserving meaningful distinctions. It also gives humans and agents a testable reason for every specialized type.
+
+## Surface projections of the rule
+
+The rule has one canonical statement, then multiple governed projections:
+
+- the SSD source defines the architectural rule
+- a knowledge system may retain a claim instance and its provenance
+- runtimes conform through schemas, registries, validation, and tests
+- domain packs apply the rule to their own concepts
+- event streams preserve evidence that the rule was applied
+- public websites may project an approved explanation, but do not become the canonical source
+
+A projection may reference or operationalize the rule. It must not silently redefine it.
+
 ## Types vs components
 
 A component answers:
@@ -72,6 +105,7 @@ The design system becomes the source of truth for meaning.
 ## Continue exploring
 
 - → [DSO 03 — States and Variants Are Not the Same](urn:ssd:toc:v2:dso:03)
+- → [Semantics 03 — States and Transitions](urn:ssd:toc:v2:semantics:03)
 - → [JSON-LD 01 — Modeling Entities for Interaction](urn:ssd:toc:v2:jsonld:01)
 - → [Foundations 07 — Minimum Viable Semantic Model](urn:ssd:toc:v2:foundations:07)
 - → [DSO 01](urn:ssd:toc:v2:dso:01)
