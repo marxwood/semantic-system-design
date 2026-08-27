@@ -1,6 +1,6 @@
 experiment_id: ssd-agent-transfer-001
 status: active
-stage: handoff_probe
+stage: first_ssd_transfer_pair
 
 sot:
   repository: marxwood/semantic-system-design
@@ -168,7 +168,7 @@ work_items:
     type: coordination_probe
     intent: Prove participant to coordinator to evaluator handoff through repository state with no human message routing.
     assigned_to: chatgpt-coordinator
-    status: running
+    status: completed
     claim:
       agent_id: chatgpt-coordinator
       observed_state_ref: experiment-ssd-transfer@a074cefb070cfe73396b442f32e01b29b5d1ba09
@@ -198,6 +198,11 @@ work_items:
       - experiments/agent-transfer/events/0027-coordinator-assigns-handoff-participant.md
       - experiments/agent-transfer/events/0033-coordinator-accepts-handoff-participant-run.md
       - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
+      - experiments/agent-transfer/evaluations/state-handoff-probe-001/chatgpt-evaluator-result.md
+      - experiments/agent-transfer/events/0039-handoff-evaluation-chatgpt-completed.md
+      - experiments/agent-transfer/events/0041-coordinator-accepts-handoff-evaluation.md
+      - experiments/agent-transfer/events/0042-state-handoff-probe-completed.md
+      - experiments/agent-transfer/events/0043-first-ssd-transfer-pair-started.md
 
   - id: handoff-participant-hermes-001
     type: coordination_probe_participant
@@ -244,7 +249,7 @@ work_items:
     parent_work_item: state-handoff-probe-001
     intent: Independently verify that the Hermes participant completion and coordinator handoff are reconstructable from authoritative repository state without human routing.
     assigned_to: chatgpt-evaluator
-    status: claimed
+    status: completed
     claim:
       agent_id: chatgpt-evaluator
       observed_state_ref: experiment-ssd-transfer@5136f4f6cd354734bca72202afedc6864d994570
@@ -282,5 +287,10 @@ work_items:
       - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
       - experiments/agent-transfer/events/0036-handoff-evaluation-chatgpt-work-claimed.md
       - experiments/agent-transfer/events/0037-coordinator-admits-handoff-evaluation-claim.md
+      - experiments/agent-transfer/events/0038-handoff-evaluation-chatgpt-work-started.md
+      - experiments/agent-transfer/evaluations/state-handoff-probe-001/chatgpt-evaluator-result.md
+      - experiments/agent-transfer/events/0039-handoff-evaluation-chatgpt-completed.md
+      - experiments/agent-transfer/events/0040-handoff-evaluation-chatgpt-work-completed.md
+      - experiments/agent-transfer/events/0041-coordinator-accepts-handoff-evaluation.md
 
-next_coordinator_action: allow chatgpt-evaluator to execute handoff-evaluation-chatgpt-001 from authoritative claimed state; then validate its GitHub completion proposal
+next_coordinator_action: select one ordinary evals/ssd case and create isolated paired baseline and SSD-condition work items with identical prompt and runtime controls; then activate the first eligible clean solver
