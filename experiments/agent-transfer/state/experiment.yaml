@@ -244,7 +244,7 @@ work_items:
     parent_work_item: state-handoff-probe-001
     intent: Independently verify that the Hermes participant completion and coordinator handoff are reconstructable from authoritative repository state without human routing.
     assigned_to: chatgpt-evaluator
-    status: claimed
+    status: completed
     claim:
       agent_id: chatgpt-evaluator
       observed_state_ref: experiment-ssd-transfer@5136f4f6cd354734bca72202afedc6864d994570
@@ -282,5 +282,9 @@ work_items:
       - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
       - experiments/agent-transfer/events/0036-handoff-evaluation-chatgpt-work-claimed.md
       - experiments/agent-transfer/events/0037-coordinator-admits-handoff-evaluation-claim.md
+      - experiments/agent-transfer/events/0038-handoff-evaluation-chatgpt-work-started.md
+      - experiments/agent-transfer/evaluations/state-handoff-probe-001/chatgpt-evaluator-result.md
+      - experiments/agent-transfer/events/0039-handoff-evaluation-chatgpt-completed.md
+      - experiments/agent-transfer/events/0040-handoff-evaluation-chatgpt-work-completed.md
 
-next_coordinator_action: allow chatgpt-evaluator to execute handoff-evaluation-chatgpt-001 from authoritative claimed state; then validate its GitHub completion proposal
+next_coordinator_action: validate the chatgpt-evaluator completion proposal for handoff-evaluation-chatgpt-001; then decide whether to complete state-handoff-probe-001
