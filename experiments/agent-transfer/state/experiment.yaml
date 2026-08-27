@@ -155,6 +155,7 @@ work_items:
       - experiments/agent-transfer/events/0012-evaluator-binding-work-started.md
       - experiments/agent-transfer/events/0013-chatgpt-evaluator-registered.md
       - experiments/agent-transfer/events/0014-chatgpt-evaluator-binding-started.md
+      - experiments/agent-transfer/events/0015-coordinator-admits-evaluator-binding-start.md
       - experiments/agent-transfer/evidence/runtime-second-evaluator-001-readiness-probe.md
 
   - id: state-handoff-probe-001
