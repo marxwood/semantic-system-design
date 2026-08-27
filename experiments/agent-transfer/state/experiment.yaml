@@ -168,7 +168,7 @@ work_items:
     type: coordination_probe
     intent: Prove participant to coordinator to evaluator handoff through repository state with no human message routing.
     assigned_to: chatgpt-coordinator
-    status: claimed
+    status: running
     claim:
       agent_id: chatgpt-coordinator
       observed_state_ref: experiment-ssd-transfer@a074cefb070cfe73396b442f32e01b29b5d1ba09
@@ -194,5 +194,33 @@ work_items:
       - experiments/agent-transfer/events/0021-runtime-bootstrap-completed.md
       - experiments/agent-transfer/events/0022-state-handoff-probe-claimed.md
       - experiments/agent-transfer/events/0023-coordinator-admits-handoff-probe-claim.md
+      - experiments/agent-transfer/events/0024-state-handoff-probe-started.md
+      - experiments/agent-transfer/events/0027-coordinator-assigns-handoff-participant.md
 
-next_coordinator_action: create and assign the minimal handoff participant work to hermes-runtime under claimed state-handoff-probe-001
+  - id: handoff-participant-hermes-001
+    type: coordination_probe_participant
+    parent_work_item: state-handoff-probe-001
+    intent: Emit a deterministic participant completion artifact from authoritative repository state so the coordinator can issue an evaluator handoff without human routing.
+    assigned_to: hermes-runtime
+    status: ready
+    dependencies:
+      - runtime-hermes-001
+    input_refs:
+      - experiments/agent-transfer/CONNECT.md
+      - experiments/agent-transfer/ACTIVATION-CONTRACT.md
+      - experiments/agent-transfer/PROTOCOL.md
+      - experiments/agent-transfer/EVENTS.md
+      - experiments/agent-transfer/cases/state-handoff-probe-001-participant.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_execution
+    expected_artifacts:
+      - experiments/agent-transfer/runs/state-handoff-probe-001/hermes-participant-token.md
+      - run.completed event
+      - work.completed event
+    completion_condition: Hermes reconstructs the task from SOT, claims it, writes the required participant_handoff_ready token artifact and completion evidence through a PR targeting experiment-ssd-transfer.
+    duplicate_handling: Re-read current SOT on every wake; only the first valid claim may execute; an existing claim, completed artifact, stale source ref, or changed parent ownership produces a no-op or blocker rather than another run.
+    evidence_refs:
+      - experiments/agent-transfer/events/0025-handoff-participant-work-created.md
+      - experiments/agent-transfer/events/0026-handoff-participant-work-assigned.md
+
+next_coordinator_action: wait for hermes-runtime to claim and complete handoff-participant-hermes-001; then validate the run and create an independent evaluation item for chatgpt-evaluator
