@@ -230,5 +230,6 @@ work_items:
       - experiments/agent-transfer/events/0025-handoff-participant-work-created.md
       - experiments/agent-transfer/events/0026-handoff-participant-work-assigned.md
       - experiments/agent-transfer/events/0028-handoff-participant-hermes-work-claimed.md
+      - experiments/agent-transfer/events/0029-coordinator-admits-handoff-participant-claim.md
 
-next_coordinator_action: admit the Hermes claim for handoff-participant-hermes-001 after validating current ownership; then allow hermes-runtime to execute the participant handoff
+next_coordinator_action: wait for hermes-runtime to start and complete handoff-participant-hermes-001; then validate the run and create an independent evaluation item for chatgpt-evaluator
