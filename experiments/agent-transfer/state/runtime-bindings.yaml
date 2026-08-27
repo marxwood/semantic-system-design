@@ -1,10 +1,25 @@
 chatgpt-coordinator:
   role: coordinator
-  status: degraded
-  activation_mode: hourly_condition_watch
+  status: runnable
+  activation_mode: github_pr_event_trigger
   autonomous: true
-  event_immediate: false
-  evidence_ref: experiments/agent-transfer/events/0001-chatgpt-coordinator-binding.md
+  event_immediate: true
+  event_scope:
+    repository: marxwood/semantic-system-design
+    base_branch: experiment-ssd-transfer
+    eligible_events:
+      - pull_request_opened
+      - pull_request_ready_for_review
+      - pull_request_synchronize
+    ignored_events:
+      - pull_request_merged
+      - pull_request_closed
+      - issue_comment
+      - pull_request_review
+      - reaction
+      - non_experiment_base_branch
+  capability_note: Event delivery is filtered before experiment reconciliation; coordinator-generated merge/comment/review activity is not recursively actionable.
+  evidence_ref: experiments/agent-transfer/events/0003-chatgpt-event-trigger-enabled.md
 
 hermes-runtime:
   role: participant_architect_and_runtime_candidate
@@ -12,7 +27,22 @@ hermes-runtime:
   activation_mode: github_push_webhook
   autonomous: true
   event_immediate: true
+  event_scope:
+    repository: marxwood/semantic-system-design
+    ref: refs/heads/experiment-ssd-transfer
+    ignored_refs:
+      - refs/heads/main
+      - agent proposal branches
+      - all other refs
+  capability_note: The webhook route must discard non-authoritative branch pushes before invoking Hermes; delivery remains untrusted wake-up only.
   evidence_ref: experiments/agent-transfer/evidence/runtime-hermes-001-binding.md
+
+chatgpt-evaluator:
+  role: evaluator
+  status: runnable
+  activation_mode: coordinator_invoked_clean_context_from_sot
+  autonomous: true
+  event_immediate: false
 
 codex-architect:
   role: participant_architect
@@ -28,4 +58,4 @@ claude-architect:
   autonomous: false
   event_immediate: false
 
-next_binding_target: hermes-runtime
+next_binding_target: codex-architect
