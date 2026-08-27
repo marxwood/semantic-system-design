@@ -89,7 +89,14 @@ work_items:
     type: runtime_binding
     intent: Bind Hermes to repository events so it can observe, claim, execute, and write back assigned experiment work without human relay.
     assigned_to: hermes-runtime
-    status: ready
+    status: claimed
+    claim:
+      agent_id: hermes-runtime
+      observed_state_ref: experiment-ssd-transfer@1433842c49da34df6d024c8d9cecf8272d3a0a00
+      source_state_ref: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+      authority: experiment_runtime_binding
+      timestamp: 2026-08-27T13:56:07Z
+      event_ref: experiments/agent-transfer/events/0004-hermes-runtime-work-claimed.md
     dependencies:
       - runtime-chatgpt-coordinator-001
     input_refs:
