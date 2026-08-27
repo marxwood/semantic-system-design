@@ -1,0 +1,30 @@
+chatgpt-coordinator:
+  role: coordinator
+  status: degraded
+  activation_mode: hourly_condition_watch
+  autonomous: true
+  event_immediate: false
+  evidence_ref: experiments/agent-transfer/events/0001-chatgpt-coordinator-binding.md
+
+hermes-runtime:
+  role: participant_architect_and_runtime_candidate
+  status: unbound
+  activation_mode: github_webhook_candidate
+  autonomous: false
+  event_immediate: false
+
+codex-architect:
+  role: participant_architect
+  status: unbound
+  activation_mode: null
+  autonomous: false
+  event_immediate: false
+
+claude-architect:
+  role: participant_architect
+  status: unbound
+  activation_mode: null
+  autonomous: false
+  event_immediate: false
+
+next_binding_target: hermes-runtime
