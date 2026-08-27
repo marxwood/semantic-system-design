@@ -30,9 +30,9 @@ safe_stop:
 agents:
   chatgpt-coordinator:
     role: coordinator
-    runtime_binding: degraded
-    activation_mode: hourly_condition_watch
-    capability_note: autonomous repository-state polling is active, but this is not an event-immediate GitHub webhook listener
+    runtime_binding: runnable
+    activation_mode: github_pr_event_trigger_with_hourly_fallback
+    capability_note: ChatGPT Work Monitoring is enabled for relevant PR activity in marxwood/semantic-system-design; each activation verifies the PR targets experiment-ssd-transfer and re-reads authoritative SOT before acting. Hourly condition-watch polling remains only as degraded fallback.
   codex-architect:
     role: participant_architect
     runtime_binding: unbound
@@ -64,6 +64,26 @@ work_items:
     completion_condition: Coordinator can autonomously re-check repository state on a recurring schedule and act only when coordinator work is runnable.
     evidence_refs:
       - experiments/agent-transfer/events/0001-chatgpt-coordinator-binding.md
+
+  - id: runtime-chatgpt-event-trigger-002
+    type: runtime_binding_upgrade
+    intent: Promote chatgpt-coordinator from polling-primary to GitHub PR event-driven activation while retaining polling only as a resilience fallback.
+    assigned_to: chatgpt-coordinator
+    status: completed
+    dependencies:
+      - runtime-chatgpt-coordinator-001
+    input_refs:
+      - experiments/agent-transfer/CONNECT.md
+      - experiments/agent-transfer/ACTIVATION-CONTRACT.md
+      - experiments/agent-transfer/COORDINATOR.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_runtime_binding
+    expected_artifacts:
+      - event-trigger binding evidence
+      - updated coordinator runtime status
+    completion_condition: Relevant GitHub PR activity can autonomously activate a fresh Work coordinator run which verifies target branch and reconstructs authority from current SOT state before acting.
+    evidence_refs:
+      - experiments/agent-transfer/events/0003-chatgpt-event-trigger-enabled.md
 
   - id: runtime-hermes-001
     type: runtime_binding
