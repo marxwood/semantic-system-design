@@ -123,8 +123,8 @@ work_items:
   - id: runtime-second-evaluator-001
     type: runtime_binding
     intent: Bind an independent second agent runtime for blinded evaluation of participant runs.
-    assigned_to: coordinator
-    status: planned
+    assigned_to: chatgpt-coordinator
+    status: ready
     dependencies:
       - runtime-chatgpt-coordinator-001
     input_refs:
@@ -157,4 +157,4 @@ work_items:
       - evaluator completion event
     completion_condition: Full handoff loop completes from SOT state without human relay.
 
-next_coordinator_action: bind hermes-runtime through an event-driven GitHub adapter, then bind an independent evaluator runtime
+next_coordinator_action: claim runtime-second-evaluator-001, select and bind an independent evaluator runtime, then ready state-handoff-probe-001
