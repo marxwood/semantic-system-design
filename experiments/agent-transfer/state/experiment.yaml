@@ -46,6 +46,11 @@ agents:
     runtime_binding: runnable
     activation_mode: github_push_webhook
     capability_note: Hermes gateway receives signed GitHub push events, reduces payloads to untrusted wake-up tokens, reconstructs authority from current experiment SOT, and writes claims/outcomes through PRs. Duplicate or stale delivery is a no-op unless current SOT exposes eligible work.
+  chatgpt-evaluator:
+    role: evaluator
+    runtime_binding: binding
+    activation_mode: coordinator_invoked_clean_context_from_sot
+    capability_note: A fresh isolated agent invocation receives only authoritative experiment state, evaluation work inputs, evaluator-only case material, and the SSD rubric; it does not inherit participant or coordinator conversation context.
 
 work_items:
   - id: runtime-chatgpt-coordinator-001
@@ -124,7 +129,7 @@ work_items:
     type: runtime_binding
     intent: Bind an independent second agent runtime for blinded evaluation of participant runs.
     assigned_to: chatgpt-coordinator
-    status: claimed
+    status: running
     claim:
       agent_id: chatgpt-coordinator
       observed_state_ref: experiment-ssd-transfer@77cf1e2fbc6ebc84f44f4809c3508711b9e42146
@@ -147,6 +152,11 @@ work_items:
     evidence_refs:
       - experiments/agent-transfer/events/0010-chatgpt-evaluator-binding-work-claimed.md
       - experiments/agent-transfer/events/0011-coordinator-admits-evaluator-binding-claim.md
+      - experiments/agent-transfer/events/0012-evaluator-binding-work-started.md
+      - experiments/agent-transfer/events/0013-chatgpt-evaluator-registered.md
+      - experiments/agent-transfer/events/0014-chatgpt-evaluator-binding-started.md
+      - experiments/agent-transfer/events/0015-coordinator-admits-evaluator-binding-start.md
+      - experiments/agent-transfer/evidence/runtime-second-evaluator-001-readiness-probe.md
 
   - id: state-handoff-probe-001
     type: coordination_probe
@@ -167,4 +177,4 @@ work_items:
       - evaluator completion event
     completion_condition: Full handoff loop completes from SOT state without human relay.
 
-next_coordinator_action: select and bind an independent evaluator runtime for claimed work runtime-second-evaluator-001, then ready state-handoff-probe-001
+next_coordinator_action: validate clean-context readiness and writeback evidence for chatgpt-evaluator, complete runtime-second-evaluator-001, then ready state-handoff-probe-001
