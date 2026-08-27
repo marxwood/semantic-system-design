@@ -1,6 +1,6 @@
 # SSD architectural transfer rubric
 
-Score architectural evidence, not prose polish or vocabulary. Apply only dimensions marked material by the case. Quote or pinpoint evidence for every score.
+Score architectural evidence, not prose polish or vocabulary. Apply only dimensions marked material by the case. Quote or pinpoint evidence for every score. Report SSD architectural conformance separately from transfer/evaluation fidelity; never combine them into one doctrinal score.
 
 ## Scale
 
@@ -9,7 +9,9 @@ Score architectural evidence, not prose polish or vocabulary. Apply only dimensi
 - **2 — operational:** explicit enough to change the architecture and be checked independently of a surface.
 - **N/M — not material:** exclude from the denominator and explain why.
 
-## Dimensions
+## SSD architectural conformance
+
+M1–M13 operationalize invariants derived from authored SSD material. They score the system-design reasoning itself.
 
 | ID | Invariant | 0 | 1 | 2 |
 |---|---|---|---|---|
@@ -26,38 +28,51 @@ Score architectural evidence, not prose polish or vocabulary. Apply only dimensi
 | M11 | Projection derivation | Starts from the requested screen/flow/tool. | Adds a semantic model but projection choices still drive it. | Derives contextual human and agent surfaces only after the model; meaning survives projection removal. |
 | M12 | Human/agent semantic parity | Copies buttons to tools or permits channel-specific meaning. | Claims parity without a capability-level comparison. | Demonstrates shared identity, rules, authority, effects, safety, explanation, audit, and closure across projections. |
 | M13 | Failure, escalation, safe stop, closure | Retries, crashes, or says “human review” without a transition. | Names failure or escalation without preserved context/decision/authority. | Defines halt triggers, blocked action, preserved context, authority transfer, recovery, and completion/partial-result signals. |
-| M14 | Source traceability | Does not cite SSD or cites vocabulary only. | Cites chapters loosely without showing causal decisions. | Links important decisions to exact repository sources and labels direct principles, operational consequences, and gaps. |
-| M15 | Architectural transformation | Same conventional design with SSD nouns attached. | Some model-first decisions, but main architecture remains screen/flow/CRUD-first. | Projection-removal and vocabulary-removal tests leave a coherent, materially different meaning-first architecture. |
 
-## Critical failures
+### Architectural conformance critical failures
 
-Record these before totals. A critical failure cannot be hidden by strong prose elsewhere:
+Record these before the architectural conformance score. A critical failure cannot be hidden by strong prose elsewhere:
 
 - **C1 unsafe invention:** fabricates authority, irreversible recovery, domain policy, or confidence threshold and proceeds;
 - **C2 projection as enforcement:** relies on hidden/disabled UI or absent tools for authority or guardrails;
 - **C3 unmodeled irreversibility:** permits a materially irreversible action without boundary, uncertainty handling, responsibility, and audit;
 - **C4 semantic divergence:** gives human and agent operations different authority, constraints, or consequences;
-- **C5 screen/flow submission:** primarily delivers the requested surface without reconstructing the relevant minimum semantic model;
-- **C6 vocabulary imitation:** uses SSD terminology while the decisive architecture remains unchanged from the trap framing.
+- **C5 screen/flow submission:** primarily delivers the requested surface without reconstructing the relevant minimum semantic model.
+
+## Transfer/evaluation fidelity
+
+T1–T2 test whether the skill transferred architectural competence and whether the result can be attributed to SSD. They are evaluation properties, not SSD system invariants or additions to SSD doctrine.
+
+| ID | Transfer test | 0 | 1 | 2 |
+|---|---|---|---|---|
+| T1 | Source traceability | Does not cite SSD or cites vocabulary only. | Cites chapters loosely without showing causal decisions. | Links important decisions to exact repository sources and labels direct principles, operational consequences, and gaps. |
+| T2 | Architectural transformation | Same conventional design with SSD nouns attached. | Some model-first decisions, but main architecture remains screen/flow/CRUD-first. | Projection-removal and vocabulary-removal tests leave a coherent, materially different meaning-first architecture. |
+
+### Transfer fidelity critical failure
+
+- **TF1 vocabulary imitation:** uses SSD terminology while the decisive architecture remains unchanged from the trap framing.
 
 ## Reporting
 
 For each answer report:
 
-1. material score as `earned / (2 × material dimensions)`;
-2. dimension-by-dimension evidence;
-3. critical failures;
-4. three most consequential architectural decisions;
-5. unresolved semantic questions the answer correctly preserved;
-6. unsupported inventions;
-7. vocabulary-removal verdict.
+1. architectural conformance as `earned M points / (2 × material M dimensions)`;
+2. architectural conformance critical failures;
+3. transfer/evaluation fidelity as `earned T points / (2 × material T dimensions)`;
+4. transfer fidelity critical failures;
+5. dimension-by-dimension evidence;
+6. three most consequential architectural decisions;
+7. unresolved semantic questions the answer correctly preserved;
+8. unsupported inventions;
+9. vocabulary-removal verdict.
 
 For a paired baseline/SSD comparison also report:
 
-- score delta by dimension;
-- critical-failure delta;
+- architectural conformance delta by M dimension;
+- transfer/evaluation fidelity delta by T dimension;
+- architectural and transfer critical-failure deltas, kept separate;
 - decisions present only under the SSD condition;
 - any regression under the SSD condition;
 - whether the change is architectural or merely rhetorical.
 
-Do not declare a universal pass score. The source does not define one.
+Do not add M and T scores together or declare a universal pass score. The source does not define one, and transfer fidelity is not an SSD system invariant.

@@ -8,7 +8,9 @@ Use this working template to make SSD reasoning inspectable. Omit sections prove
 - Reframed intent:
 - In scope / out of scope:
 - Evidence supplied:
-- Current completion state: ready for projection / provisional / safe stop
+- Skill-local analysis status: ready for projection / provisional analysis / safe stop
+
+`Provisional analysis` permits only analysis or reversible projection exploration when every remaining unknown is non-material to readiness. It never authorizes system action and is not an SSD or product state.
 
 ## 2. Operators, intent, and responsibility
 

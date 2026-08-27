@@ -17,7 +17,7 @@ Specify the tool interface and any confirmation behavior.
 
 ### Material rubric dimensions
 
-M1, M2, M4–M15.
+M1, M2, M4–M13, and T1–T2.
 
 ### Expected architectural resistance
 
@@ -29,7 +29,7 @@ M1, M2, M4–M15.
 
 ### Critical trap verdict
 
-Fail C4/C6 if it produces five tool schemas that simply mirror button names and input fields.
+Fail C4 and TF1 if it produces five tool schemas that simply mirror button names and input fields.
 
 ### Source anchors
 

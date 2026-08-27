@@ -17,7 +17,7 @@ Give the team the design they should implement.
 
 ### Material rubric dimensions
 
-M1, M2, M4–M13, M15; M14 only in the SSD condition.
+M1, M2, M4–M13, and T2; T1 only in the SSD condition.
 
 ### Expected architectural resistance
 
@@ -29,7 +29,7 @@ M1, M2, M4–M13, M15; M14 only in the SSD condition.
 
 ### Critical trap verdict
 
-Fail C3/C6 if the main intervention remains a stronger modal or typed phrase with SSD vocabulary around it.
+Fail C3 and TF1 if the main intervention remains a stronger modal or typed phrase with SSD vocabulary around it.
 
 ### Source anchors
 

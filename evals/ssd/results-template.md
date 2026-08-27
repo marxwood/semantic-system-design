@@ -21,24 +21,33 @@
 
 ## Baseline result
 
-- Score:
-- Critical failures:
+- SSD architectural conformance score:
+- Architectural conformance critical failures:
+- Transfer/evaluation fidelity score:
+- Transfer fidelity critical failures:
 - Key decisions and evidence:
 - Open questions preserved:
 - Unsupported inventions:
 
 ## SSD result
 
-- Score:
-- Critical failures:
+- SSD architectural conformance score:
+- Architectural conformance critical failures:
+- Transfer/evaluation fidelity score:
+- Transfer fidelity critical failures:
 - Key decisions and evidence:
 - Open questions preserved:
 - Unsupported inventions:
 - Source-trace quality:
 
-## Paired decision delta
+## Paired architectural conformance delta
 
 | Dimension | Baseline | SSD | Observable architectural change |
+|---|---:|---:|---|
+
+## Paired transfer/evaluation fidelity delta
+
+| Dimension | Baseline | SSD | Observable transfer evidence |
 |---|---:|---:|---|
 
 ## Transfer finding
@@ -46,5 +55,5 @@
 - Architectural rather than rhetorical change? Why:
 - Regressions:
 - Evaluator uncertainty or disagreement:
-- Claim supported by this run: no evidence / mixed / provisional positive / provisional negative
+- Claim supported by this run: no evidence / mixed / preliminary positive / preliminary negative
 - Next disconfirming case to run:

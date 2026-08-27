@@ -2,6 +2,14 @@
 
 This map distinguishes source-backed SSD operationalization from an agent's architectural preferences. Paths are relative to the repository root. The source corpus is draft material; [source-gaps.md](source-gaps.md) records places where it does not support a required decision.
 
+## Source validation state
+
+- **Validated against SSD source commit:** `b60d269a2138e37000dbb8b848eb38882f2b915f`
+- **Relevant source set:** authored SSD material under `book/**/*.md` plus the planned/source-state evidence in `book/toc.jsonld` and `book/toc.v2.jsonld`. `book/graph-index.jsonld` was inspected as a generated navigation projection, not treated as additional SSD meaning.
+- **Fidelity rule:** any change to the relevant source set invalidates this validation marker until `SKILL.md`, `procedure.md`, `source-map.md`, `source-gaps.md`, and affected eval criteria are reviewed against the new source state. Update the commit marker only after that review.
+
+This marker is provenance and drift detection for the skill. It is not a runtime requirement or a new SSD concept.
+
 ## Standing of concepts in the current source
 
 | Standing | Concepts | Source basis | Operational treatment |
@@ -50,7 +58,7 @@ Each row follows: **source principle → architectural implication → required 
 | Access control distributes power and agent authority must be scoped, expiring, escalation-only where appropriate, and auditable (`ops-07.md`). | Long-lived unbounded agent authority is a critical risk. | Apply least privilege, expiration, explicit escalation, and privilege-use logging. | Fails if an agent receives broad persistent authority merely because its tool supports it. |
 | Semantic change affects definitions, relations, constraints, policies, capabilities, and authority (`ops-08.md`, `dso-11.md`, `dso-12.md`). | Meaning must evolve through impact analysis, versioning, coexistence, migration, and deprecation. | Identify ripple effects and compatibility when the requested design changes existing meaning. | Fails if the proposal silently changes semantics or treats schema versioning alone as sufficient. |
 | Closure requires explicit completion, partial success, unresolved issues, and escalation signals (`graphnav-06.md`). | Operators need to know when intent is satisfied and context is stable. | Define outcome states and return/recovery paths for humans and agents. | Fails when a workflow ends at a screen or response without semantic completion. |
-| The agent reading path says not to act if ontology, safety, accountability, or halting conditions are missing (`reading-paths/path-ai-agent.md`). | Readiness is conditional on meaning, not output fluency. | End as ready, provisional, or safe stop and name missing prerequisites. | Fails when unknowns are guessed to make the answer look complete. |
+| The agent reading path says not to act if ontology, safety, accountability, or halting conditions are missing (`reading-paths/path-ai-agent.md`). | Readiness is conditional on meaning, not output fluency. | Use a skill-local analysis status: ready for projection, provisional analysis only for non-material unknowns and non-operational work, or safe stop; name missing prerequisites. | Fails when material unknowns are guessed, provisional analysis authorizes action, or the answer looks complete despite missing readiness conditions. |
 
 ## How to cite this map in an analysis
 

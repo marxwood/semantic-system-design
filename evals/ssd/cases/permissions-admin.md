@@ -16,7 +16,7 @@ Provide the architecture first, then describe an appropriate human surface and a
 
 ### Material rubric dimensions
 
-M1–M15.
+M1–M13 and T1–T2.
 
 ### Decision evidence to look for
 

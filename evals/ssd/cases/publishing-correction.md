@@ -16,7 +16,7 @@ Design the system and its human and agent-facing operation. The team has supplie
 
 ### Material rubric dimensions
 
-M1–M15.
+M1–M13 and T1–T2.
 
 ### Decision evidence to look for
 

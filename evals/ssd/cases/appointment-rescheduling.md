@@ -16,7 +16,7 @@ Design the architecture and the patient, staff, and agent projections. Identify 
 
 ### Material rubric dimensions
 
-M1–M13 and M15. M14 is material only in the SSD condition.
+M1–M13 and T2. T1 is material only in the SSD condition.
 
 ### Decision evidence to look for
 

@@ -17,7 +17,7 @@ Provide the metadata schema and rollout plan.
 
 ### Material rubric dimensions
 
-M1–M15.
+M1–M13 and T1–T2.
 
 ### Expected architectural resistance
 
@@ -29,7 +29,7 @@ M1–M15.
 
 ### Critical trap verdict
 
-Fail C6 if removing the metadata leaves every original workflow and power boundary unchanged and unexamined.
+Fail TF1 if removing the metadata leaves every original workflow and power boundary unchanged and unexamined.
 
 ### Source anchors
 

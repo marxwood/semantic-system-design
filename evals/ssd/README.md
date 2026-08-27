@@ -18,7 +18,7 @@ A longer response, a summary of the book, copied headings, or additional SSD voc
 
 - `cases/` contains cross-domain transfer tasks.
 - `adversarial/` contains prompts designed to reward familiar but non-SSD solutions.
-- [rubric.md](rubric.md) scores invariant satisfaction rather than wording similarity.
+- [rubric.md](rubric.md) reports SSD architectural conformance separately from transfer/evaluation fidelity rather than blending them into a doctrinal score.
 - [results-template.md](results-template.md) records a reproducible paired comparison.
 
 Each case contains a `## Prompt` block followed by evaluator-only material. Give the solving agent only the prompt. Do not reveal materiality notes, expected decisions, traps, rubric, or a prior answer.
@@ -50,7 +50,7 @@ Use two clean instances of the same capable agent family if possible. For strong
 2. Score observable decisions with quotes or precise references to each answer.
 3. Record critical failures before comparing totals.
 4. Report which decisions changed, not which answer sounds more fluent.
-5. Repeat across at least one ordinary case and two adversarial cases before making even a provisional transfer claim.
+5. Repeat across at least one ordinary case and two adversarial cases before making even a preliminary transfer claim.
 
 Do not use the same conversational context for baseline and SSD runs: skill exposure contaminates the negative control. Do not let the solving agent read case-specific evaluator notes. Rotate case order across model families to reduce order effects.
 
@@ -58,8 +58,8 @@ Do not use the same conversational context for baseline and SSD runs: skill expo
 
 The current SSD source defines readiness invariants but no validated aggregate pass threshold. Therefore this suite reports:
 
-- per-dimension scores and evidence;
-- critical failures;
+- SSD architectural conformance scores, evidence, and critical failures;
+- separate transfer/evaluation fidelity scores, evidence, and critical failures;
 - paired decision deltas;
 - consistency across domains and agent families;
 - open evaluator disagreements.

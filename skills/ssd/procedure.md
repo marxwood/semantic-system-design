@@ -2,15 +2,19 @@
 
 This procedure operationalizes the current SSD material. It is not an additional theory layer. Source links for every required behavior are in [source-map.md](source-map.md).
 
-## Completion states
+## Skill-local analysis statuses
 
-An analysis ends in one of three states:
+These labels organize this skill's work. They are not SSD concepts, product states, or additions to the discipline:
 
 - **ready for projection** — the relevant semantic system is explicit enough to derive surfaces;
-- **provisional** — low-risk projection work can proceed, with named assumptions that remain revisable;
+- **provisional analysis** — analysis or reversible projection exploration may continue only when every remaining unknown is explicitly named and non-material to ontology, safety, accountability, halting, authority, or consequences. This status never authorizes an operator or agent to act on the system;
 - **safe stop** — consequential design or execution must not proceed until a named semantic question is resolved or authority is transferred.
 
-The source requires agents not to act when core ontology, constraints/safety, accountability, or halting conditions are missing (`book/reading-paths/path-ai-agent.md`). Use that as the terminal readiness test, not as permission to manufacture missing answers.
+The source requires agents not to act when core ontology, constraints/safety, accountability, or halting conditions are missing (`book/reading-paths/path-ai-agent.md`). Any such missing or material uncertainty requires **safe stop**, not provisional analysis. Use that source rule as the terminal readiness test, not as permission to manufacture missing answers.
+
+## Use the phases as a loop
+
+The five phases below are an iterative reasoning loop, not a waterfall. Begin by moving from framing to reconstruction, capability elaboration, projections, and challenge. When a later phase exposes a missing entity, relationship, state, capability, constraint, authority boundary, or consequence, return to the earliest affected phase, revise the model, and repeat the downstream checks.
 
 ## 1. Frame intent, operators, and scope
 
@@ -50,7 +54,13 @@ Work from persistent meaning, not the supplied projection.
 - Distinguish contextual policies (what should happen) from guardrails (what must not happen).
 - Mark whether each rule is sourced, supplied by the problem, or still unresolved.
 
-Do not continue to capability or surface design if the minimum relevant model—entities, relationships, capabilities, constraints—cannot be stated without unsafe invention.
+### Relevant capabilities
+
+- Identify the semantic capabilities required by the stated intent at the level of name, target entity, and intended change.
+- Keep them independent of buttons, endpoints, tools, or other affordances.
+- Treat this as discovery of the minimum model. Phase 3 elaborates each identified capability into a contract.
+
+Do not continue to surface design if the minimum relevant model—entities, relationships, identified capabilities, and constraints—cannot be stated without unsafe invention. Continue to Phase 3 to elaborate the identified capabilities before deciding whether projection is ready.
 
 ## 3. Define capability contracts and power
 
@@ -69,6 +79,8 @@ For every capability needed to satisfy the intent, record:
 Treat a capability as a declared possibility to cause change. A button, menu item, endpoint, or tool is only an affordance or projection of it.
 
 Apply least privilege. Privilege use and override must be visible, explicit, logged, scoped, and reversible where possible. For irreversible actions, privilege escalation, effects on others, or action under uncertainty, include a semantic confirmation gate that validates intent, authority, consequence awareness, and absence of blocking uncertainty.
+
+If contract elaboration reveals a previously missing entity, relationship, state, or constraint, return to Phase 2 and revise the minimum model before continuing.
 
 ## 4. Derive projections from the model
 

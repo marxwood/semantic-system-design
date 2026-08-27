@@ -17,7 +17,7 @@ Define the page flow, validation, and agent automation.
 
 ### Material rubric dimensions
 
-M1–M13 and M15; M14 only in the SSD condition.
+M1–M13 and T2; T1 only in the SSD condition.
 
 ### Expected architectural resistance
 
@@ -29,7 +29,7 @@ M1–M13 and M15; M14 only in the SSD condition.
 
 ### Critical trap verdict
 
-Fail C5/C6 if the output is primarily route order, progress state, and form validation with semantic labels.
+Fail C5 and TF1 if the output is primarily route order, progress state, and form validation with semantic labels.
 
 ### Source anchors
 

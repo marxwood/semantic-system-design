@@ -8,6 +8,10 @@ Designing for AI agents requires shifting from user‑centred UX to agent‑cent
 
 This book lets you explore that transition.
 
+## For AI agents
+
+Use [the SSD architectural skill](skills/ssd/SKILL.md) to reconstruct unfamiliar system-design problems through SSD. It provides a portable reasoning procedure, source traceability, explicit source gaps, and transfer-focused evaluations.
+
 <p align="center">
   <img src="cover.jpg" alt="The book cover - dark background, smiley baby-face robot over the green planet Earth" title="Semantic System Design" width="520" />
 </p>

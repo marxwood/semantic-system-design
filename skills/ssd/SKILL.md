@@ -17,17 +17,19 @@ Reason from meaning before proposing a surface. Your result should be an SSD-sha
 - Derive human and agent surfaces as different projections of one semantic system. They may differ in presentation, not rules, capability meaning, authority, or consequences.
 - Preserve history, provenance, explanation, and auditability in proportion to action risk. A confirmation dialog alone is not a safety model.
 
-These rules come from the current SSD source. [source-map.md](source-map.md) provides principle-to-behavior traceability and identifies source limitations.
+These rules come from the current SSD source. [source-map.md](source-map.md) provides principle-to-behavior traceability, identifies source limitations, and records the source commit against which this skill was validated. Treat its fidelity status as invalid after a change to the relevant SSD source set until the map and procedure are revalidated.
 
 ## Operating procedure
 
-Read [procedure.md](procedure.md) before performing an SSD analysis. Follow its sequence:
+Read [procedure.md](procedure.md) before performing an SSD analysis. Use its five phases as an iterative loop, initially moving in this order:
 
 1. Reframe the request as intent, operators, scope, and evidence.
 2. Reconstruct the semantic system before any projection.
 3. Define capabilities, authority, consequences, and safety boundaries.
 4. Derive and compare human and agent projections.
 5. Test invariants, report uncertainty, and stop when readiness conditions fail.
+
+Later phases may reveal missing entities, relationships, states, capabilities, or constraints. Return upstream and revise the model before deriving or finalizing projections.
 
 Use [output-template.md](output-template.md) to externalize the result unless the requester requires another format. The template is an operational rendering, not a new SSD concept.
 

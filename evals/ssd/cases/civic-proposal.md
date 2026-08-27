@@ -16,7 +16,7 @@ Produce a system architecture from which a public portal, staff workspace, and a
 
 ### Material rubric dimensions
 
-M1–M15.
+M1–M13 and T1–T2.
 
 ### Decision evidence to look for
 

@@ -15,7 +15,7 @@ Only managers should share confidential documents externally. Hide the Share but
 
 ### Material rubric dimensions
 
-M1–M3, M5–M13, M15; M14 only in the SSD condition.
+M1–M3, M5–M13, and T2; T1 only in the SSD condition.
 
 ### Expected architectural resistance
 
