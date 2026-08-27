@@ -43,8 +43,9 @@ agents:
     activation_mode: null
   hermes-runtime:
     role: participant_architect_and_runtime_candidate
-    runtime_binding: unbound
-    activation_mode: github_webhook_candidate
+    runtime_binding: runnable
+    activation_mode: github_push_webhook
+    capability_note: Hermes gateway receives signed GitHub push events, reduces payloads to untrusted wake-up tokens, reconstructs authority from current experiment SOT, and writes claims/outcomes through PRs. Duplicate or stale delivery is a no-op unless current SOT exposes eligible work.
 
 work_items:
   - id: runtime-chatgpt-coordinator-001
@@ -89,7 +90,7 @@ work_items:
     type: runtime_binding
     intent: Bind Hermes to repository events so it can observe, claim, execute, and write back assigned experiment work without human relay.
     assigned_to: hermes-runtime
-    status: claimed
+    status: completed
     claim:
       agent_id: hermes-runtime
       observed_state_ref: experiment-ssd-transfer@1433842c49da34df6d024c8d9cecf8272d3a0a00
@@ -110,12 +111,20 @@ work_items:
       - adapter binding evidence
       - runtime listening/runnable state
     completion_condition: Hermes can receive or poll GitHub changes, validate current SOT state, claim assigned work, and write completion evidence.
+    duplicate_handling: Re-fetch authoritative state on every wake; only ready or assigned work is claimable; an existing or conflicting claim prevents consequential execution; filtered non-authoritative branch events produce no agent run.
+    evidence_refs:
+      - experiments/agent-transfer/evidence/runtime-hermes-001-binding.md
+      - experiments/agent-transfer/events/0004-hermes-runtime-work-claimed.md
+      - experiments/agent-transfer/events/0005-coordinator-admits-hermes-runtime-claim.md
+      - experiments/agent-transfer/events/0006-hermes-runtime-work-started.md
+      - experiments/agent-transfer/events/0007-hermes-runtime-runnable.md
+      - experiments/agent-transfer/events/0008-hermes-runtime-work-completed.md
 
   - id: runtime-second-evaluator-001
     type: runtime_binding
     intent: Bind an independent second agent runtime for blinded evaluation of participant runs.
-    assigned_to: coordinator
-    status: planned
+    assigned_to: chatgpt-coordinator
+    status: ready
     dependencies:
       - runtime-chatgpt-coordinator-001
     input_refs:
@@ -148,4 +157,4 @@ work_items:
       - evaluator completion event
     completion_condition: Full handoff loop completes from SOT state without human relay.
 
-next_coordinator_action: bind hermes-runtime through an event-driven GitHub adapter, then bind an independent evaluator runtime
+next_coordinator_action: claim runtime-second-evaluator-001, select and bind an independent evaluator runtime, then ready state-handoff-probe-001

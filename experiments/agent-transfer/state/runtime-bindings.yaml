@@ -8,10 +8,11 @@ chatgpt-coordinator:
 
 hermes-runtime:
   role: participant_architect_and_runtime_candidate
-  status: unbound
-  activation_mode: github_webhook_candidate
-  autonomous: false
-  event_immediate: false
+  status: runnable
+  activation_mode: github_push_webhook
+  autonomous: true
+  event_immediate: true
+  evidence_ref: experiments/agent-transfer/evidence/runtime-hermes-001-binding.md
 
 codex-architect:
   role: participant_architect
