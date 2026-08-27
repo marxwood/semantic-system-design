@@ -2,6 +2,13 @@ experiment_id: ssd-agent-transfer-001
 status: active
 stage: runtime_bootstrap
 
+sot:
+  repository: marxwood/semantic-system-design
+  branch: experiment-ssd-transfer
+  experiment_root: experiments/agent-transfer
+  state_path: experiments/agent-transfer/state/experiment.yaml
+  write_policy: experiment_branch_only
+
 authority:
   coordinator_role: chatgpt-coordinator
   human_required_for:
@@ -66,6 +73,7 @@ work_items:
     dependencies:
       - runtime-chatgpt-coordinator-001
     input_refs:
+      - experiments/agent-transfer/CONNECT.md
       - experiments/agent-transfer/ACTIVATION-CONTRACT.md
       - experiments/agent-transfer/EVENTS.md
       - experiments/agent-transfer/RUNTIME-BOOTSTRAP.md
@@ -84,6 +92,7 @@ work_items:
     dependencies:
       - runtime-chatgpt-coordinator-001
     input_refs:
+      - experiments/agent-transfer/CONNECT.md
       - experiments/agent-transfer/PROTOCOL.md
     required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
     authority: experiment_runtime_binding
@@ -102,6 +111,7 @@ work_items:
       - runtime-hermes-001
       - runtime-second-evaluator-001
     input_refs:
+      - experiments/agent-transfer/CONNECT.md
       - experiments/agent-transfer/PROTOCOL.md
     required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
     authority: experiment_execution
