@@ -196,13 +196,15 @@ work_items:
       - experiments/agent-transfer/events/0023-coordinator-admits-handoff-probe-claim.md
       - experiments/agent-transfer/events/0024-state-handoff-probe-started.md
       - experiments/agent-transfer/events/0027-coordinator-assigns-handoff-participant.md
+      - experiments/agent-transfer/events/0033-coordinator-accepts-handoff-participant-run.md
+      - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
 
   - id: handoff-participant-hermes-001
     type: coordination_probe_participant
     parent_work_item: state-handoff-probe-001
     intent: Emit a deterministic participant completion artifact from authoritative repository state so the coordinator can issue an evaluator handoff without human routing.
     assigned_to: hermes-runtime
-    status: claimed
+    status: completed
     claim:
       agent_id: hermes-runtime
       observed_state_ref: experiment-ssd-transfer@64f5477b850b744420962d92796576b12d1499b4
@@ -231,5 +233,45 @@ work_items:
       - experiments/agent-transfer/events/0026-handoff-participant-work-assigned.md
       - experiments/agent-transfer/events/0028-handoff-participant-hermes-work-claimed.md
       - experiments/agent-transfer/events/0029-coordinator-admits-handoff-participant-claim.md
+      - experiments/agent-transfer/events/0030-handoff-participant-hermes-work-started.md
+      - experiments/agent-transfer/runs/state-handoff-probe-001/hermes-participant-token.md
+      - experiments/agent-transfer/events/0031-handoff-participant-hermes-run-completed.md
+      - experiments/agent-transfer/events/0032-handoff-participant-hermes-work-completed.md
+      - experiments/agent-transfer/events/0033-coordinator-accepts-handoff-participant-run.md
 
-next_coordinator_action: wait for hermes-runtime to start and complete handoff-participant-hermes-001; then validate the run and create an independent evaluation item for chatgpt-evaluator
+  - id: handoff-evaluation-chatgpt-001
+    type: coordination_probe_evaluation
+    parent_work_item: state-handoff-probe-001
+    intent: Independently verify that the Hermes participant completion and coordinator handoff are reconstructable from authoritative repository state without human routing.
+    assigned_to: chatgpt-evaluator
+    status: ready
+    dependencies:
+      - handoff-participant-hermes-001
+      - runtime-second-evaluator-001
+    input_refs:
+      - experiments/agent-transfer/ACTIVATION-CONTRACT.md
+      - experiments/agent-transfer/PROTOCOL.md
+      - experiments/agent-transfer/EVENTS.md
+      - experiments/agent-transfer/cases/state-handoff-probe-001-participant.md
+      - experiments/agent-transfer/cases/state-handoff-probe-001-evaluation.md
+      - experiments/agent-transfer/runs/state-handoff-probe-001/hermes-participant-token.md
+      - experiments/agent-transfer/events/0028-handoff-participant-hermes-work-claimed.md
+      - experiments/agent-transfer/events/0029-coordinator-admits-handoff-participant-claim.md
+      - experiments/agent-transfer/events/0030-handoff-participant-hermes-work-started.md
+      - experiments/agent-transfer/events/0031-handoff-participant-hermes-run-completed.md
+      - experiments/agent-transfer/events/0032-handoff-participant-hermes-work-completed.md
+      - experiments/agent-transfer/events/0033-coordinator-accepts-handoff-participant-run.md
+      - evals/ssd/rubric.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_execution
+    expected_artifacts:
+      - experiments/agent-transfer/evaluations/state-handoff-probe-001/chatgpt-evaluator-result.md
+      - evaluation.completed event
+      - work.completed event
+    completion_condition: A fresh chatgpt-evaluator context reconstructs and verifies the mechanical handoff from SOT, records an evidence-backed accepted, blocked, or invalid verdict without making SSD transfer-quality claims, and returns control through GitHub state.
+    duplicate_handling: Re-read authoritative SOT on every activation; only the first valid claim may evaluate; an existing claim/result, stale source ref, incomplete participant dependency, changed parent ownership, or safe stop produces a no-op or blocker.
+    evidence_refs:
+      - experiments/agent-transfer/events/0034-handoff-evaluation-work-created.md
+      - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
+
+next_coordinator_action: activate chatgpt-evaluator in a fresh clean context for handoff-evaluation-chatgpt-001; then validate its GitHub completion proposal
