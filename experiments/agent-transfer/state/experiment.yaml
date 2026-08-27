@@ -31,8 +31,23 @@ agents:
   chatgpt-coordinator:
     role: coordinator
     runtime_binding: runnable
-    activation_mode: github_pr_event_trigger_with_hourly_fallback
-    capability_note: ChatGPT Work Monitoring is enabled for relevant PR activity in marxwood/semantic-system-design; each activation verifies the PR targets experiment-ssd-transfer and re-reads authoritative SOT before acting. Hourly condition-watch polling remains only as degraded fallback.
+    activation_mode: github_pr_event_trigger
+    event_scope:
+      repository: marxwood/semantic-system-design
+      base_branch: experiment-ssd-transfer
+      eligible_events:
+        - pull_request_opened
+        - pull_request_ready_for_review
+        - pull_request_synchronize
+      ignored_events:
+        - pull_request_merged
+        - pull_request_closed
+        - issue_comment
+        - pull_request_review
+        - reaction
+        - non_experiment_base_branch
+        - coordinator_generated_side_effect
+    capability_note: ChatGPT Work Monitoring is event-driven for proposal-changing activity on open PRs targeting experiment-ssd-transfer. The runtime applies the hard routing gate before SOT reconciliation; the separate hourly fallback watcher is disabled while event scope is stabilized.
   codex-architect:
     role: participant_architect
     runtime_binding: unbound
@@ -90,6 +105,8 @@ work_items:
     completion_condition: Relevant GitHub PR activity can autonomously activate a fresh Work coordinator run which verifies target branch and reconstructs authority from current SOT state before acting.
     evidence_refs:
       - experiments/agent-transfer/events/0003-chatgpt-event-trigger-enabled.md
+      - experiments/agent-transfer/evidence/event-routing-scope-correction.md
+      - experiments/agent-transfer/events/0044-coordinator-accepts-event-routing-scope-correction.md
 
   - id: runtime-hermes-001
     type: runtime_binding

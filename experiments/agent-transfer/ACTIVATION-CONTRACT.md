@@ -19,11 +19,49 @@ An agent runtime is eligible to act only when all of the following are true:
 
 The runtime must re-read current state immediately before claiming work. Repository notification alone is not authority to execute.
 
+## Event routing boundary
+
+Wake-up delivery must be scoped before the activation predicate is evaluated.
+
+For this experiment, the authoritative branch is `experiment-ssd-transfer`.
+
+A runtime must not begin experiment reconciliation merely because some unrelated part of `marxwood/semantic-system-design` changed.
+
+### Hermes push routing
+
+`hermes-runtime` may be awakened by GitHub `push` only when the pushed ref is exactly:
+
+`refs/heads/experiment-ssd-transfer`
+
+A push to `main`, an agent proposal branch, or any other branch is outside the Hermes experiment activation surface and must be discarded before invoking the agent.
+
+### ChatGPT coordinator PR routing
+
+`chatgpt-coordinator` is eligible for event-driven activation only for an **open pull request whose base branch is `experiment-ssd-transfer`**, and only on one of these proposal-changing events:
+
+- pull request opened;
+- pull request marked ready for review;
+- new commits synchronized/pushed to the pull request.
+
+The following are not coordinator activation events and must terminate as a no-op before SOT reconciliation:
+
+- pull requests targeting `main` or any other base branch;
+- pull request merged or closed;
+- comments;
+- reviews;
+- reactions;
+- other observational/post-transition activity.
+
+Coordinator-produced merges, comments, or reviews must not recursively create another coordinator execution cycle.
+
+The delivery system may still technically emit a broader notification. The runtime adapter must apply this routing boundary before reconstructing or mutating experiment state.
+
 ## Runtime adapter responsibility
 
 Each participating agent needs a runtime-specific adapter capable of:
 
 - receiving or polling for repository state changes;
+- filtering delivery through the experiment event-routing boundary before agent invocation;
 - identifying relevant events/work items;
 - loading current experiment state;
 - atomically claiming eligible work or otherwise proving exclusive ownership;
