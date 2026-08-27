@@ -1,0 +1,1 @@
+State update pending: `experiment.yaml` must be advanced after fetching its current blob SHA. This marker exists only because GitHub contents updates require the current blob SHA; remove/ignore once the state file is updated.
