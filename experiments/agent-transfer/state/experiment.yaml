@@ -1,6 +1,6 @@
 experiment_id: ssd-agent-transfer-001
 status: active
-stage: runtime_bootstrap
+stage: handoff_probe
 
 sot:
   repository: marxwood/semantic-system-design
@@ -48,9 +48,9 @@ agents:
     capability_note: Hermes gateway receives signed GitHub push events, reduces payloads to untrusted wake-up tokens, reconstructs authority from current experiment SOT, and writes claims/outcomes through PRs. Duplicate or stale delivery is a no-op unless current SOT exposes eligible work.
   chatgpt-evaluator:
     role: evaluator
-    runtime_binding: binding
+    runtime_binding: runnable
     activation_mode: coordinator_invoked_clean_context_from_sot
-    capability_note: A fresh isolated agent invocation receives only authoritative experiment state, evaluation work inputs, evaluator-only case material, and the SSD rubric; it does not inherit participant or coordinator conversation context.
+    capability_note: A fresh isolated agent invocation reconstructs authority from current SOT, receives only its assigned evaluation inputs and evaluator-only material, safely no-ops when no evaluation is authorized, and writes evidence through GitHub without participant or coordinator conversation context.
 
 work_items:
   - id: runtime-chatgpt-coordinator-001
@@ -129,7 +129,7 @@ work_items:
     type: runtime_binding
     intent: Bind an independent second agent runtime for blinded evaluation of participant runs.
     assigned_to: chatgpt-coordinator
-    status: running
+    status: completed
     claim:
       agent_id: chatgpt-coordinator
       observed_state_ref: experiment-ssd-transfer@77cf1e2fbc6ebc84f44f4809c3508711b9e42146
@@ -149,6 +149,7 @@ work_items:
       - independence constraints
       - binding evidence
     completion_condition: An evaluator can be activated from SOT state independently of the participant context.
+    duplicate_handling: Re-fetch authoritative state on every activation; execute only a ready or assigned evaluation item for chatgpt-evaluator; stale, duplicate, unassigned, or conflicting activation produces a safe no-op or blocker evidence without evaluating.
     evidence_refs:
       - experiments/agent-transfer/events/0010-chatgpt-evaluator-binding-work-claimed.md
       - experiments/agent-transfer/events/0011-coordinator-admits-evaluator-binding-claim.md
@@ -157,12 +158,17 @@ work_items:
       - experiments/agent-transfer/events/0014-chatgpt-evaluator-binding-started.md
       - experiments/agent-transfer/events/0015-coordinator-admits-evaluator-binding-start.md
       - experiments/agent-transfer/evidence/runtime-second-evaluator-001-readiness-probe.md
+      - experiments/agent-transfer/evidence/runtime-second-evaluator-001-writeback-probe.md
+      - experiments/agent-transfer/events/0016-chatgpt-evaluator-listening.md
+      - experiments/agent-transfer/events/0017-chatgpt-evaluator-runnable.md
+      - experiments/agent-transfer/events/0018-evaluator-binding-work-completed.md
+      - experiments/agent-transfer/events/0019-coordinator-accepts-evaluator-binding.md
 
   - id: state-handoff-probe-001
     type: coordination_probe
     intent: Prove participant to coordinator to evaluator handoff through repository state with no human message routing.
-    assigned_to: coordinator
-    status: planned
+    assigned_to: chatgpt-coordinator
+    status: ready
     dependencies:
       - runtime-hermes-001
       - runtime-second-evaluator-001
@@ -176,5 +182,8 @@ work_items:
       - coordinator decision event
       - evaluator completion event
     completion_condition: Full handoff loop completes from SOT state without human relay.
+    evidence_refs:
+      - experiments/agent-transfer/events/0020-state-handoff-probe-readied.md
+      - experiments/agent-transfer/events/0021-runtime-bootstrap-completed.md
 
-next_coordinator_action: validate clean-context readiness and writeback evidence for chatgpt-evaluator, complete runtime-second-evaluator-001, then ready state-handoff-probe-001
+next_coordinator_action: claim state-handoff-probe-001 and create the minimal participant work whose completion hands off through coordinator state to chatgpt-evaluator
