@@ -10,6 +10,7 @@
 - evidence_refs:
   - `experiments/agent-transfer/state/experiment.yaml`
   - `experiments/agent-transfer/events/0013-chatgpt-evaluator-registered.md`
+  - `experiments/agent-transfer/evidence/runtime-second-evaluator-001-readiness-probe.md`
 - authority: `experiment_runtime_binding`
 - timestamp: `2026-08-27T14:11:32Z`
 
