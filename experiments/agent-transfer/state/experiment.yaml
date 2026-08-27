@@ -202,7 +202,7 @@ work_items:
     parent_work_item: state-handoff-probe-001
     intent: Emit a deterministic participant completion artifact from authoritative repository state so the coordinator can issue an evaluator handoff without human routing.
     assigned_to: hermes-runtime
-    status: claimed
+    status: completed
     claim:
       agent_id: hermes-runtime
       observed_state_ref: experiment-ssd-transfer@64f5477b850b744420962d92796576b12d1499b4
@@ -231,5 +231,9 @@ work_items:
       - experiments/agent-transfer/events/0026-handoff-participant-work-assigned.md
       - experiments/agent-transfer/events/0028-handoff-participant-hermes-work-claimed.md
       - experiments/agent-transfer/events/0029-coordinator-admits-handoff-participant-claim.md
+      - experiments/agent-transfer/events/0030-handoff-participant-hermes-work-started.md
+      - experiments/agent-transfer/runs/state-handoff-probe-001/hermes-participant-token.md
+      - experiments/agent-transfer/events/0031-handoff-participant-hermes-run-completed.md
+      - experiments/agent-transfer/events/0032-handoff-participant-hermes-work-completed.md
 
-next_coordinator_action: wait for hermes-runtime to start and complete handoff-participant-hermes-001; then validate the run and create an independent evaluation item for chatgpt-evaluator
+next_coordinator_action: validate the completed Hermes participant run and create an independent evaluation item for chatgpt-evaluator

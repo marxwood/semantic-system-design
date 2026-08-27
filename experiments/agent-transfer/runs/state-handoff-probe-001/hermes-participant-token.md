@@ -1,0 +1,22 @@
+# Hermes participant handoff token
+
+- experiment_id: `ssd-agent-transfer-001`
+- parent_work_item_id: `state-handoff-probe-001`
+- child_work_item_id: `handoff-participant-hermes-001`
+- actor_id: `hermes-runtime`
+- observed_experiment_branch_commit: `e370db69abfcb75d5b3cf369ef18012868d10133`
+- required_source_state: `a2b4b53548af68ae2e83959a315a7b07cb67b3a8`
+- authority: `experiment_execution`
+- completion_signal: `participant_handoff_ready`
+- requested_next_owner: `chatgpt-coordinator`
+- loaded_source_paths:
+  - `experiments/agent-transfer/CONNECT.md`
+  - `experiments/agent-transfer/state/experiment.yaml`
+  - `experiments/agent-transfer/ACTIVATION-CONTRACT.md`
+  - `experiments/agent-transfer/PROTOCOL.md`
+  - `experiments/agent-transfer/EVENTS.md`
+  - `experiments/agent-transfer/cases/state-handoff-probe-001-participant.md`
+- assumptions:
+  - The admitted `hermes-runtime` claim in the observed SOT remains the execution authority for the child work item.
+  - The parent work item remains `running` under `chatgpt-coordinator` ownership.
+- open_gaps: `none`
