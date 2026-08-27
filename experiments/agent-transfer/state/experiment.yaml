@@ -1,6 +1,6 @@
 experiment_id: ssd-agent-transfer-001
 status: active
-stage: handoff_probe
+stage: first_ssd_transfer_pair
 
 sot:
   repository: marxwood/semantic-system-design
@@ -168,7 +168,7 @@ work_items:
     type: coordination_probe
     intent: Prove participant to coordinator to evaluator handoff through repository state with no human message routing.
     assigned_to: chatgpt-coordinator
-    status: running
+    status: completed
     claim:
       agent_id: chatgpt-coordinator
       observed_state_ref: experiment-ssd-transfer@a074cefb070cfe73396b442f32e01b29b5d1ba09
@@ -198,6 +198,11 @@ work_items:
       - experiments/agent-transfer/events/0027-coordinator-assigns-handoff-participant.md
       - experiments/agent-transfer/events/0033-coordinator-accepts-handoff-participant-run.md
       - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
+      - experiments/agent-transfer/evaluations/state-handoff-probe-001/chatgpt-evaluator-result.md
+      - experiments/agent-transfer/events/0039-handoff-evaluation-chatgpt-completed.md
+      - experiments/agent-transfer/events/0041-coordinator-accepts-handoff-evaluation.md
+      - experiments/agent-transfer/events/0042-state-handoff-probe-completed.md
+      - experiments/agent-transfer/events/0043-first-ssd-transfer-pair-started.md
 
   - id: handoff-participant-hermes-001
     type: coordination_probe_participant
@@ -286,5 +291,6 @@ work_items:
       - experiments/agent-transfer/evaluations/state-handoff-probe-001/chatgpt-evaluator-result.md
       - experiments/agent-transfer/events/0039-handoff-evaluation-chatgpt-completed.md
       - experiments/agent-transfer/events/0040-handoff-evaluation-chatgpt-work-completed.md
+      - experiments/agent-transfer/events/0041-coordinator-accepts-handoff-evaluation.md
 
-next_coordinator_action: validate the chatgpt-evaluator completion proposal for handoff-evaluation-chatgpt-001; then decide whether to complete state-handoff-probe-001
+next_coordinator_action: select one ordinary evals/ssd case and create isolated paired baseline and SSD-condition work items with identical prompt and runtime controls; then activate the first eligible clean solver
