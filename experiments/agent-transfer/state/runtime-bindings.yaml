@@ -20,6 +20,7 @@ chatgpt-coordinator:
       - non_experiment_base_branch
   capability_note: Event delivery is filtered before experiment reconciliation; coordinator-generated merge/comment/review activity is not recursively actionable.
   evidence_ref: experiments/agent-transfer/events/0003-chatgpt-event-trigger-enabled.md
+  scope_evidence_ref: experiments/agent-transfer/evidence/event-routing-scope-correction.md
 
 hermes-runtime:
   role: participant_architect_and_runtime_candidate
@@ -43,6 +44,7 @@ chatgpt-evaluator:
   activation_mode: coordinator_invoked_clean_context_from_sot
   autonomous: true
   event_immediate: false
+  evidence_ref: experiments/agent-transfer/events/0017-chatgpt-evaluator-runnable.md
 
 codex-architect:
   role: participant_architect
@@ -58,4 +60,4 @@ claude-architect:
   autonomous: false
   event_immediate: false
 
-next_binding_target: codex-architect
+next_binding_target: null
