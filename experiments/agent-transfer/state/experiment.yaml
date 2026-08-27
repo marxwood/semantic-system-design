@@ -124,7 +124,14 @@ work_items:
     type: runtime_binding
     intent: Bind an independent second agent runtime for blinded evaluation of participant runs.
     assigned_to: chatgpt-coordinator
-    status: ready
+    status: claimed
+    claim:
+      agent_id: chatgpt-coordinator
+      observed_state_ref: experiment-ssd-transfer@77cf1e2fbc6ebc84f44f4809c3508711b9e42146
+      source_state_ref: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+      authority: experiment_runtime_binding
+      timestamp: 2026-08-27T14:07:21Z
+      event_ref: experiments/agent-transfer/events/0010-chatgpt-evaluator-binding-work-claimed.md
     dependencies:
       - runtime-chatgpt-coordinator-001
     input_refs:
@@ -137,6 +144,9 @@ work_items:
       - independence constraints
       - binding evidence
     completion_condition: An evaluator can be activated from SOT state independently of the participant context.
+    evidence_refs:
+      - experiments/agent-transfer/events/0010-chatgpt-evaluator-binding-work-claimed.md
+      - experiments/agent-transfer/events/0011-coordinator-admits-evaluator-binding-claim.md
 
   - id: state-handoff-probe-001
     type: coordination_probe
@@ -157,4 +167,4 @@ work_items:
       - evaluator completion event
     completion_condition: Full handoff loop completes from SOT state without human relay.
 
-next_coordinator_action: claim runtime-second-evaluator-001, select and bind an independent evaluator runtime, then ready state-handoff-probe-001
+next_coordinator_action: select and bind an independent evaluator runtime for claimed work runtime-second-evaluator-001, then ready state-handoff-probe-001
