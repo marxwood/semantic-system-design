@@ -1,0 +1,111 @@
+experiment_id: ssd-agent-transfer-001
+status: active
+stage: runtime_bootstrap
+
+authority:
+  coordinator_role: chatgpt-coordinator
+  human_required_for:
+    - authored_ssd_semantic_change
+    - new_foundational_ssd_claim
+    - human_authority_boundary_change
+    - authoritative_external_publication
+
+source_state:
+  ssd_authored_source_commit: b60d269a2138e37000dbb8b848eb38882f2b915f
+  ssd_skill_merge_commit: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+  skill_path: skills/ssd/SKILL.md
+  validation_path: skills/ssd/source-map.md
+
+safe_stop:
+  active: false
+  reason: null
+
+agents:
+  chatgpt-coordinator:
+    role: coordinator
+    runtime_binding: binding
+    activation_mode: scheduled_poll_candidate
+    capability_note: current interactive ChatGPT instance can operate the GitHub SOT when invoked, but cannot remain a resident GitHub webhook listener
+  codex-architect:
+    role: participant_architect
+    runtime_binding: unbound
+    activation_mode: null
+  claude-architect:
+    role: participant_architect
+    runtime_binding: unbound
+    activation_mode: null
+  hermes-runtime:
+    role: participant_architect_and_runtime_candidate
+    runtime_binding: unbound
+    activation_mode: github_webhook_candidate
+
+work_items:
+  - id: runtime-chatgpt-coordinator-001
+    type: runtime_binding
+    intent: Bind the ChatGPT coordinator role to an autonomous repository-state watcher using available scheduling/polling capability until a true event-driven adapter exists.
+    assigned_to: chatgpt-coordinator
+    status: ready
+    dependencies: []
+    input_refs:
+      - experiments/agent-transfer/ACTIVATION-CONTRACT.md
+      - experiments/agent-transfer/COORDINATOR.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_runtime_binding
+    expected_artifacts:
+      - runtime binding evidence
+      - updated agent runtime status
+    completion_condition: Coordinator can autonomously re-check repository state on a recurring schedule and act only when coordinator work is runnable.
+
+  - id: runtime-hermes-001
+    type: runtime_binding
+    intent: Bind Hermes to repository events so it can observe, claim, execute, and write back assigned experiment work without human relay.
+    assigned_to: hermes-runtime
+    status: planned
+    dependencies:
+      - runtime-chatgpt-coordinator-001
+    input_refs:
+      - experiments/agent-transfer/ACTIVATION-CONTRACT.md
+      - experiments/agent-transfer/EVENTS.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_runtime_binding
+    expected_artifacts:
+      - adapter binding evidence
+      - runtime listening/runnable state
+    completion_condition: Hermes can receive or poll GitHub changes, validate current SOT state, claim assigned work, and write completion evidence.
+
+  - id: runtime-second-evaluator-001
+    type: runtime_binding
+    intent: Bind an independent second agent runtime for blinded evaluation of participant runs.
+    assigned_to: coordinator
+    status: planned
+    dependencies:
+      - runtime-chatgpt-coordinator-001
+    input_refs:
+      - experiments/agent-transfer/PROTOCOL.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_runtime_binding
+    expected_artifacts:
+      - selected evaluator runtime
+      - independence constraints
+      - binding evidence
+    completion_condition: An evaluator can be activated from SOT state independently of the participant context.
+
+  - id: state-handoff-probe-001
+    type: coordination_probe
+    intent: Prove participant to coordinator to evaluator handoff through repository state with no human message routing.
+    assigned_to: coordinator
+    status: planned
+    dependencies:
+      - runtime-hermes-001
+      - runtime-second-evaluator-001
+    input_refs:
+      - experiments/agent-transfer/PROTOCOL.md
+    required_source_state: a2b4b53548af68ae2e83959a315a7b07cb67b3a8
+    authority: experiment_execution
+    expected_artifacts:
+      - participant run event
+      - coordinator decision event
+      - evaluator completion event
+    completion_condition: Full handoff loop completes from SOT state without human relay.
+
+next_coordinator_action: claim runtime-chatgpt-coordinator-001 and establish the first autonomous watcher
