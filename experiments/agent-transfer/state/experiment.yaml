@@ -281,5 +281,6 @@ work_items:
       - experiments/agent-transfer/events/0034-handoff-evaluation-work-created.md
       - experiments/agent-transfer/events/0035-handoff-evaluation-requested.md
       - experiments/agent-transfer/events/0036-handoff-evaluation-chatgpt-work-claimed.md
+      - experiments/agent-transfer/events/0037-coordinator-admits-handoff-evaluation-claim.md
 
-next_coordinator_action: validate and admit the chatgpt-evaluator claim for handoff-evaluation-chatgpt-001; then allow the evaluator to execute from authoritative claimed state
+next_coordinator_action: allow chatgpt-evaluator to execute handoff-evaluation-chatgpt-001 from authoritative claimed state; then validate its GitHub completion proposal
